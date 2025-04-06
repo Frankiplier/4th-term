@@ -9,13 +9,13 @@ public class ChargingStation : MonoBehaviour
 
     private Flashlight flashlight;
 
-    void Start()
-    {
-        flashlight = GameObject.FindGameObjectWithTag("Flashlight").GetComponent<Flashlight>();
-    }
-
     void Update()
     {
+        if (flashlight == null)
+        {
+            flashlight = GameObject.FindGameObjectWithTag("Flashlight")?.GetComponent<Flashlight>();
+        }
+
         if (currentCooldown > 0f)
         {
             currentCooldown -= Time.deltaTime;
@@ -32,6 +32,8 @@ public class ChargingStation : MonoBehaviour
 
     private IEnumerator ChargeFlashlight()
     {
+        if (flashlight == null) yield break;
+
         isCharging = true;
         flashlight.isCharging = true;
 
