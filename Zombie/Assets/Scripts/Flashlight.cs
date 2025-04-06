@@ -7,7 +7,6 @@ public class Flashlight : MonoBehaviour
 
     public float maxBattery, currentBattery, dischargeRate;
     public bool isCharging = false;
-
     private const string BatteryKey = "CurrentBattery";
 
     void Awake()
@@ -50,10 +49,11 @@ public class Flashlight : MonoBehaviour
 
     void Update()
     {
-        if (!isCharging)
+        if (!isCharging && !CameraFade.Instance.IsFading())
         {
             currentBattery -= dischargeRate * Time.deltaTime;
             currentBattery = Mathf.Max(currentBattery, 0f);
+
             transform.localScale = new Vector3(currentBattery, currentBattery, 1f);
 
             if (currentBattery <= 0f)
