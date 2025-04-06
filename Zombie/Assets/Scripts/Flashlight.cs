@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Flashlight : MonoBehaviour
 {
@@ -34,6 +33,6 @@ public class Flashlight : MonoBehaviour
 
     void GameOver()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Debug.Log("You lost");
     }
 }
