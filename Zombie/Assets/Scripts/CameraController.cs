@@ -18,7 +18,6 @@ public class CameraController : MonoBehaviour
     void MoveCamera()
     {
         Vector3 mousePos = Input.mousePosition;
-
         Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(mousePos);
 
         if (mousePos.x < Screen.width * 0.1f)
