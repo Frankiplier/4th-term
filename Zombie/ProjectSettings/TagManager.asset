@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Flashlight
+  - Interface
+  - Gun
+  - Zombie
   layers:
   - Default
   - TransparentFX
