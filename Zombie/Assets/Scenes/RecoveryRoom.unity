@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 202732845}
   - component: {fileID: 202732844}
   m_Layer: 0
-  m_Name: Door
+  m_Name: Door - Hallway 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Room1
+  sceneName: Hallway1
 --- !u!61 &202732845
 BoxCollider2D:
   m_ObjectHideFlags: 0
