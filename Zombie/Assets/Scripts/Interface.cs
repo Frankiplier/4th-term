@@ -7,6 +7,7 @@ public class Interface : MonoBehaviour
 {
     public static Interface Instance;
 
+    public Image[] heartImages;
     public TMP_Text shellsText;
     public int shellsCount = 0;
 
@@ -37,5 +38,4 @@ public class Interface : MonoBehaviour
     {
         shellsText.text = shellsCount.ToString();
     }
-
 }

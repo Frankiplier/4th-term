@@ -2,15 +2,39 @@ using UnityEngine;
 
 public class HP : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    private int currentHP = 3, maxHP = 3;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            RemoveHeart();
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            AddHeart();
+        }
+    }
+
+    void RemoveHeart()
+    {
+        if (currentHP <= 0) return;
+
+        currentHP--;
+        Interface.Instance.heartImages[currentHP].enabled = false;
+
+        if (currentHP == 0)
+        {
+            Debug.Log("Game Over");
+        }
+    }
+
+    void AddHeart()
+    {
+        if (currentHP >= maxHP) return;
+
+        Interface.Instance.heartImages[currentHP].enabled = true;
+        currentHP++;
     }
 }
