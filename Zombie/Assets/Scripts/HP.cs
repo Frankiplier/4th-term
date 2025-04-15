@@ -2,22 +2,18 @@ using UnityEngine;
 
 public class HP : MonoBehaviour
 {
-    private int currentHP = 3, maxHP = 3;
+    public int currentHP = 3, maxHP = 3;
 
     void Update()
     {
+        // debug for now
         if (Input.GetKeyDown(KeyCode.A))
         {
             RemoveHeart();
         }
-
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            AddHeart();
-        }
     }
 
-    void RemoveHeart()
+    public void RemoveHeart()
     {
         if (currentHP <= 0) return;
 
@@ -30,7 +26,7 @@ public class HP : MonoBehaviour
         }
     }
 
-    void AddHeart()
+    public void AddHeart()
     {
         if (currentHP >= maxHP) return;
 
