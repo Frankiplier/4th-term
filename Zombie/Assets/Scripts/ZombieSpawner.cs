@@ -13,7 +13,6 @@ public class ZombieSpawner : MonoBehaviour
     public ZombieSpriteSet[] zombieSpriteSets;
 
     public float spawnIntervalMin, spawnIntervalMax;
-
     public float minX, maxX, spawnY;
 
     void Start()
@@ -26,6 +25,7 @@ public class ZombieSpawner : MonoBehaviour
         while (true)
         {
             float waitTime = Random.Range(spawnIntervalMin, spawnIntervalMax);
+            
             yield return new WaitForSeconds(waitTime);
 
             Vector2 spawnPos = new Vector2(Random.Range(minX, maxX), spawnY);

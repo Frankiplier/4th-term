@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-     private HP hp;
+    private HP hp;
 
     private SpriteRenderer spriteRenderer;
     private ZombieSpawner.ZombieSpriteSet spriteSet;
