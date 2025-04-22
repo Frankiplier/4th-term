@@ -4,15 +4,6 @@ public class HP : MonoBehaviour
 {
     public int currentHP = 3, maxHP = 3;
 
-    void Update()
-    {
-        // debug for now
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            RemoveHeart();
-        }
-    }
-
     public void RemoveHeart()
     {
         if (currentHP <= 0) return;
