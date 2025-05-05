@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: DoctorsRoom
 --- !u!61 &35099522
 BoxCollider2D:
@@ -473,6 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Hallway2
 --- !u!61 &270899730
 BoxCollider2D:
@@ -3748,6 +3750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: RecoveryRoom
 --- !u!61 &1840709386
 BoxCollider2D:

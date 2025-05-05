@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxBattery: 70
   currentBattery: 0
-  dischargeRate: 5
+  dischargeRate: 3
   isCharging: 0
 --- !u!114 &3568641208920925416
 MonoBehaviour:

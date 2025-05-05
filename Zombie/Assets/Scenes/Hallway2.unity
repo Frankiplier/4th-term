@@ -321,6 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Electrical
 --- !u!61 &840330373
 BoxCollider2D:
@@ -548,6 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Elevator
 --- !u!61 &891515658
 BoxCollider2D:
@@ -727,6 +729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Stairway
 --- !u!61 &1045888968
 BoxCollider2D:
@@ -1310,6 +1313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Hallway1
 --- !u!61 &1871534259
 BoxCollider2D:

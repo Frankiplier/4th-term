@@ -819,6 +819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: WinMenu
 --- !u!1 &1637337768
 GameObject:
@@ -930,6 +931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: HallwayGround
 --- !u!61 &1923354065
 BoxCollider2D:
@@ -1041,7 +1043,7 @@ Transform:
   m_GameObject: {fileID: 1923354063}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.53, y: -4.92, z: 0}
+  m_LocalPosition: {x: -25.69, y: -4.92, z: 0}
   m_LocalScale: {x: 5, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -3,13 +3,14 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Containers")]
 public class Containers : ScriptableObject
 {
-    public bool badge = false, codePanel = false, keys = false, crowbar = false, jacket = false;
+    public bool keys = false, badge = false, codePanel = false, power = false, crowbar = false, jacket = false;
 
     public void ResetBools()
     {
+        keys = false;
         badge = false;
         codePanel = false;
-        keys = false;
+        power = false;
         crowbar = false;
         jacket = false;
     }
