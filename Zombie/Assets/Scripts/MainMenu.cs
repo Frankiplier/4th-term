@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] PickedShellsList shellsList;
+    [SerializeField] PickedHeartsList heartsList;
+    [SerializeField] Containers containers;
 
     void Start()
     {
         shellsList.ResetList();
+        heartsList.ResetList();
+        containers.ResetBools();
     }
 
     public void StartGame()
