@@ -17,7 +17,7 @@ public class Lock : MonoBehaviour
 
     void Update()
     {
-        if (unlocked.hallway2 == false)
+        if (unlocked.codePanel == false)
         {
             hallway2Door.GetComponent<BoxCollider2D>().enabled = false;
         }

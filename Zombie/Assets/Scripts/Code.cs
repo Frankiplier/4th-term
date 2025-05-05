@@ -16,7 +16,7 @@ public class Code : MonoBehaviour
 
         if (codeTextValue == "9205")
         {
-            decrypted.hallway2 = true;
+            decrypted.codePanel = true;
         }
 
         if (codeTextValue.Length >= 4)
