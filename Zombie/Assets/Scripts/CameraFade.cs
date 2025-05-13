@@ -88,6 +88,9 @@ public class CameraFade : MonoBehaviour
     {
         fade = true;
         isFading = true;
+
+        direction = -1;
+        time = 1f;
     }
 
     public bool IsFadingComplete()

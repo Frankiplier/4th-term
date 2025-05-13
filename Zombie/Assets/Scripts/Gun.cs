@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class Gun : MonoBehaviour
 {
     public GameObject crosshair;
-    public bool isVisible = false;
 
     public static Gun Instance;
     private Interface ui;
@@ -35,7 +34,7 @@ public class Gun : MonoBehaviour
 
     void Start()
     {
-        crosshair.SetActive(false);
+        crosshair.SetActive(true);
     }
 
     void Update()
@@ -50,18 +49,7 @@ public class Gun : MonoBehaviour
             zombie = GameObject.FindGameObjectWithTag("Zombie")?.GetComponent<Zombie>();
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && isVisible)
-        {
-            crosshair.SetActive(false);
-            isVisible = false;
-        }
-        else if (Input.GetKeyDown(KeyCode.Q) && !isVisible)
-        {
-            crosshair.SetActive(true);
-            isVisible = true;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Mouse1) && isVisible && ui.shellsCount >= 1)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !PauseMenu.Instance.isPaused && ui.shellsCount >= 1)
         {
             Shoot();
 
@@ -72,6 +60,15 @@ public class Gun : MonoBehaviour
             {
                 Destroy(hit.collider.gameObject);
             }
+        }
+
+        if (PauseMenu.Instance.isPaused)
+        {
+            crosshair.SetActive(false);
+        }
+        else
+        {
+            crosshair.SetActive(true);
         }
     }
 

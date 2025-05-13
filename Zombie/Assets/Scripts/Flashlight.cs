@@ -5,6 +5,7 @@ public class Flashlight : MonoBehaviour
 {
     public static Flashlight Instance;
 
+    public GameObject light;
     public float maxBattery, currentBattery, dischargeRate;
     public bool isCharging = false;
     private const string BatteryKey = "CurrentBattery";
@@ -49,8 +50,10 @@ public class Flashlight : MonoBehaviour
 
     void Update()
     {
-        if (!isCharging && !CameraFade.Instance.IsFading())
+        if (!isCharging && !PauseMenu.Instance.isPaused && !CameraFade.Instance.IsFading())
         {
+            light.SetActive(true);
+
             currentBattery -= dischargeRate * Time.deltaTime;
             currentBattery = Mathf.Max(currentBattery, 0f);
 
@@ -62,6 +65,10 @@ public class Flashlight : MonoBehaviour
             }
 
             PlayerPrefs.SetFloat(BatteryKey, currentBattery);
+        }
+        else if (PauseMenu.Instance.isPaused)
+        {
+            light.SetActive(false);
         }
     }
 
