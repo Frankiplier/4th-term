@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 671969247}
   - component: {fileID: 671969246}
   m_Layer: 0
-  m_Name: Door - Dressing Room
+  m_Name: Door - Restaurant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
-  sceneName: DressingRoom
+  sceneName: Restaurant
 --- !u!61 &671969247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -842,7 +842,7 @@ Transform:
   m_GameObject: {fileID: 1244936499}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.69, y: -1.5088892, z: 0}
+  m_LocalPosition: {x: -0.58, y: -1.5088892, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -948,7 +948,7 @@ GameObject:
   - component: {fileID: 1539721894}
   - component: {fileID: 1539721893}
   m_Layer: 0
-  m_Name: Door - Waiting Room
+  m_Name: Door - End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -967,7 +967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
-  sceneName: WaitingRoom
+  sceneName: EndMenu
 --- !u!61 &1539721894
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1306,7 +1306,7 @@ Transform:
   m_GameObject: {fileID: 1793000325}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.15, y: -4.92, z: 0}
+  m_LocalPosition: {x: -20.67, y: -4.92, z: 0}
   m_LocalScale: {x: 5, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

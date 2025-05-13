@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 621307407}
   - component: {fileID: 621307406}
   m_Layer: 0
-  m_Name: Button - Hallway 2
+  m_Name: Button - Hallway
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -414,7 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
-  sceneName: Hallway2
+  sceneName: Hallway
 --- !u!61 &621307407
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -989,7 +989,7 @@ GameObject:
   - component: {fileID: 1504345963}
   - component: {fileID: 1504345962}
   m_Layer: 0
-  m_Name: Button - Hallway Ground
+  m_Name: Button - Reception
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1008,7 +1008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
-  sceneName: HallwayGround
+  sceneName: Reception
 --- !u!61 &1504345963
 BoxCollider2D:
   m_ObjectHideFlags: 0

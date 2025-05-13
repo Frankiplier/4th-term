@@ -9,10 +9,11 @@ public class Door : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (sceneName == "Electrical" && unlocked.keys == false) return;
+        if (sceneName == "Hallway" && unlocked.gun == false) return;
+        if (sceneName == "Room" && unlocked.card == false) return;
+        if (sceneName == "Storage" && unlocked.card == false) return;
         if (sceneName == "Elevator" && unlocked.power == false) return;
-        if (sceneName == "DressingRoom" && unlocked.crowbar == false) return;
-        if (sceneName == "WinMenu" && unlocked.jacket == false) return;
+        if (sceneName == "Restaurant" && unlocked.crowbar == false) return;
 
         StartCoroutine(FadeBeforeTransition(sceneName));
     }

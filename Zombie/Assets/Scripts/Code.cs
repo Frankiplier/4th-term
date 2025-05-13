@@ -6,6 +6,8 @@ using TMPro;
 
 public class Code : MonoBehaviour
 {
+    public GameObject lockCanvas;
+
     [SerializeField] TMP_Text codeText;
     string codeTextValue = "";
     public Containers decrypted;
@@ -16,7 +18,13 @@ public class Code : MonoBehaviour
 
         if (codeTextValue == "9205")
         {
-            decrypted.codePanel = true;
+            decrypted.safe1 = true;
+            lockCanvas.SetActive(false);
+        }
+        else if (codeTextValue == "3184")
+        {
+            decrypted.safe2 = true;
+            lockCanvas.SetActive(false);
         }
 
         if (codeTextValue.Length >= 4)
