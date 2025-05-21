@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 65455713}
   - component: {fileID: 65455712}
   - component: {fileID: 65455711}
+  - component: {fileID: 65455715}
   m_Layer: 0
   m_Name: Charging Station
   m_TagString: Untagged
@@ -150,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d479ce723d8844aa71c46763c278b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 65455715}
   rechargeCooldown: 10
 --- !u!61 &65455712
 BoxCollider2D:
@@ -267,6 +269,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &65455715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65455710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: Let it be light!
+    - line: I finally see something.
+    - line: Now I can see much better.
 --- !u!1 &201310082
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,6 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 0}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Hallway
 --- !u!61 &621307407
@@ -1135,6 +1155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 0}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Reception
 --- !u!61 &1504345963

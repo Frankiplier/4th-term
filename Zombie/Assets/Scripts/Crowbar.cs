@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Crowbar : MonoBehaviour
 {
+    public DialogueTrigger trigger;
+
     public Containers unlocked;
     public GameObject crowbarItem;
 
@@ -20,5 +22,7 @@ public class Crowbar : MonoBehaviour
     void OnMouseDown()
     {
         unlocked.crowbar = true;
+
+        trigger.TriggerDialogue();
     }
 }

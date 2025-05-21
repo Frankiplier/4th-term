@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class GunGrab : MonoBehaviour
 {
+    public DialogueTrigger trigger;
+
     public Containers unlocked;
     public GameObject gunItem, gunPrefab;
 
@@ -21,5 +23,7 @@ public class GunGrab : MonoBehaviour
     void OnMouseDown()
     {
         unlocked.gun = true;
+
+        trigger.TriggerDialogue();
     }
 }

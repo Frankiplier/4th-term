@@ -6,6 +6,8 @@ using TMPro;
 
 public class Code : MonoBehaviour
 {
+    public DialogueTrigger locked, opened;
+
     public GameObject lockCanvas;
 
     [SerializeField] TMP_Text codeText;
@@ -20,16 +22,22 @@ public class Code : MonoBehaviour
         {
             decrypted.safe1 = true;
             lockCanvas.SetActive(false);
+
+            opened.TriggerDialogue();
         }
         else if (codeTextValue == "3184")
         {
             decrypted.safe2 = true;
             lockCanvas.SetActive(false);
+
+            opened.TriggerDialogue();
         }
 
         if (codeTextValue.Length >= 4)
         {
             codeTextValue = "";
+
+            locked.TriggerDialogue();
         }
     }
 

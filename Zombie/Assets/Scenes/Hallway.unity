@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 35099523}
   - component: {fileID: 35099522}
   - component: {fileID: 35099521}
+  - component: {fileID: 35099525}
   m_Layer: 0
   m_Name: Door - Hotel Room 2
   m_TagString: Untagged
@@ -150,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 35099525}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Room
 --- !u!61 &35099522
@@ -268,6 +270,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &35099525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35099520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: Locked.
+    - line: Gotta find something to open it up with...
+    - line: It won't open...
 --- !u!1 &47977930
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,6 +330,7 @@ GameObject:
   - component: {fileID: 136922333}
   - component: {fileID: 136922332}
   - component: {fileID: 136922331}
+  - component: {fileID: 136922335}
   m_Layer: 0
   m_Name: Door - Elevator
   m_TagString: Untagged
@@ -330,6 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 136922335}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Elevator
 --- !u!61 &136922332
@@ -448,6 +469,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &136922335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136922330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: It needs power.
+    - line: Maybe there is a generator here somewhere...
+    - line: No power...
 --- !u!1 &187710192
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 0}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Stairway
 --- !u!61 &270899730
@@ -772,6 +811,7 @@ GameObject:
   - component: {fileID: 345594917}
   - component: {fileID: 345594916}
   - component: {fileID: 345594915}
+  - component: {fileID: 345594919}
   m_Layer: 0
   m_Name: Door - Storage
   m_TagString: Untagged
@@ -791,6 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 345594919}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Storage
 --- !u!61 &345594916
@@ -909,6 +950,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &345594919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345594914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: Locked.
+    - line: Gotta find something to open it up with...
+    - line: It won't open...
 --- !u!1001 &457387759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1107,6 +1165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 391693c2ca2bd21418bfb7e0778f77fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 687526113}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   room: {fileID: 35099520}
   storage: {fileID: 345594914}
@@ -1157,6 +1216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687526112}
   - component: {fileID: 687526111}
+  - component: {fileID: 687526113}
   m_Layer: 0
   m_Name: Dead Cleaner
   m_TagString: Untagged
@@ -1235,6 +1295,23 @@ Transform:
   - {fileID: 601217285}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &687526113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687526110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: It has to be useful... Right?
+    - line: Does it do anything?
+    - line: Let's hope it's good for something...
 --- !u!1 &892736400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1598,6 +1675,7 @@ GameObject:
   - component: {fileID: 1500540670}
   - component: {fileID: 1500540669}
   - component: {fileID: 1500540668}
+  - component: {fileID: 1500540672}
   m_Layer: 0
   m_Name: Charging Station
   m_TagString: Untagged
@@ -1617,6 +1695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d479ce723d8844aa71c46763c278b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1500540672}
   rechargeCooldown: 10
 --- !u!61 &1500540669
 BoxCollider2D:
@@ -1734,6 +1813,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1500540672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500540667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: Let it be light!
+    - line: I finally see something.
+    - line: Now I can see much better.
 --- !u!1 &1677099123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,6 +1927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1715317556}
   - component: {fileID: 1715317555}
+  - component: {fileID: 1715317557}
   m_Layer: 0
   m_Name: ZombieSpawner
   m_TagString: Untagged
@@ -1850,6 +1947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13594790a19fab49afdc154947c04a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1715317557}
   zombiePrefab: {fileID: 7413860057010648582, guid: b1e7abb94817d9d4eb253976cb773a31, type: 3}
   zombieSpriteSets:
   - form1: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
@@ -1874,6 +1972,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1715317557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715317554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: Someone is here...
+    - line: I can hear you!
+    - line: Is someone there?!
 --- !u!1 &1765765413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1936,6 +2051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 0}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: HotelRoom
 --- !u!61 &1840709386
@@ -2066,6 +2182,7 @@ GameObject:
   - component: {fileID: 1878721600}
   - component: {fileID: 1878721599}
   - component: {fileID: 1878721598}
+  - component: {fileID: 1878721602}
   m_Layer: 0
   m_Name: Shell 4
   m_TagString: Untagged
@@ -2085,6 +2202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4331ae85e3312438e814f069251eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1878721602}
   shell: {fileID: 1878721597}
   pickedShells: {fileID: 11400000, guid: 4e3e3bfb05e155f428e179afca2a7cec, type: 2}
   index: 3
@@ -2194,6 +2312,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1878721602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878721597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: This will probably come in handy.
+    - line: Better safe than sorry.
+    - line: I hope I won't have to use this...
 --- !u!1 &2003171072
 GameObject:
   m_ObjectHideFlags: 0

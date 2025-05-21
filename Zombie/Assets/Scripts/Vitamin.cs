@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Vitamin : MonoBehaviour
 {
+    public DialogueTrigger trigger;
+
     public GameObject vitamin;
     [SerializeField] PickedHeartsList pickedHearts;
     [SerializeField] int index;
@@ -23,6 +25,10 @@ public class Vitamin : MonoBehaviour
         {
             hp.AddHeart();
             vitamin.SetActive(false);
+        }
+        else
+        {
+            trigger.TriggerDialogue();
         }
     }
 

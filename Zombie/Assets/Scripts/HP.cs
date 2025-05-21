@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class HP : MonoBehaviour
 {
+    public DialogueTrigger damage, heal;
+
     public int currentHP = 3, maxHP = 3;
 
     public void RemoveHeart()
@@ -10,6 +12,8 @@ public class HP : MonoBehaviour
 
         currentHP--;
         Interface.Instance.heartImages[currentHP].enabled = false;
+
+        damage.TriggerDialogue();
 
         if (currentHP == 0)
         {
@@ -23,5 +27,7 @@ public class HP : MonoBehaviour
 
         Interface.Instance.heartImages[currentHP].enabled = true;
         currentHP++;
+
+        heal.TriggerDialogue();
     }
 }

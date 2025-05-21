@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1619984460005178191}
   - component: {fileID: 240545695496510639}
   - component: {fileID: 3568641208920925416}
+  - component: {fileID: 1790268744321461159}
   m_Layer: 0
   m_Name: Flashlight
   m_TagString: Flashlight
@@ -46,7 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18317a12b5ca13a45ac7c7b83692d1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 7024815012198759370}
+  trigger: {fileID: 1790268744321461159}
+  lightCone: {fileID: 7024815012198759370}
   maxBattery: 70
   currentBattery: 0
   dischargeRate: 3
@@ -63,6 +65,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f936f6af0eed66d48ba0725e1abe177a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1790268744321461159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5632036335924389484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: It's getting dark...
+    - line: Where are the batteries?
+    - line: I need more power...
 --- !u!1 &7024815012198759370
 GameObject:
   m_ObjectHideFlags: 0

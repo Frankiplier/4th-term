@@ -5,7 +5,9 @@ public class Flashlight : MonoBehaviour
 {
     public static Flashlight Instance;
 
-    public GameObject light;
+    public DialogueTrigger trigger;
+
+    public GameObject lightCone;
     public float maxBattery, currentBattery, dischargeRate;
     public bool isCharging = false;
     private const string BatteryKey = "CurrentBattery";
@@ -52,14 +54,18 @@ public class Flashlight : MonoBehaviour
     {
         if (!isCharging && !PauseMenu.Instance.isPaused && !CameraFade.Instance.IsFading())
         {
-            light.SetActive(true);
+            lightCone.SetActive(true);
 
             currentBattery -= dischargeRate * Time.deltaTime;
             currentBattery = Mathf.Max(currentBattery, 0f);
 
             transform.localScale = new Vector3(currentBattery, currentBattery, 1f);
 
-            if (currentBattery <= 0f)
+            if (currentBattery <= maxBattery / 2 && currentBattery >= 30)
+            {
+                trigger.TriggerDialogue();
+            }
+            else if (currentBattery <= 0f)
             {
                 GameOver();
             }
@@ -68,7 +74,7 @@ public class Flashlight : MonoBehaviour
         }
         else if (PauseMenu.Instance.isPaused)
         {
-            light.SetActive(false);
+            lightCone.SetActive(false);
         }
     }
 

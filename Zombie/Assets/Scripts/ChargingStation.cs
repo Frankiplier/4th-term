@@ -3,6 +3,8 @@ using System.Collections;
 
 public class ChargingStation : MonoBehaviour
 {
+    public DialogueTrigger trigger;
+
     public float rechargeCooldown;
     private bool isCharging = false;
     private float currentCooldown = 0f;
@@ -38,7 +40,10 @@ public class ChargingStation : MonoBehaviour
         flashlight.isCharging = true;
 
         yield return new WaitForSeconds(1f);
+
         flashlight.RechargeBattery();
+
+        trigger.TriggerDialogue();
 
         currentCooldown = rechargeCooldown;
 

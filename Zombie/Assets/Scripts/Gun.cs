@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class Gun : MonoBehaviour
 {
+    public DialogueTrigger empty, miss, kill;
+
     public GameObject crosshair;
 
     public static Gun Instance;
@@ -59,17 +61,27 @@ public class Gun : MonoBehaviour
             if (hit.collider != null && hit.collider.CompareTag("Zombie"))
             {
                 Destroy(hit.collider.gameObject);
+
+                kill.TriggerDialogue();
             }
+            else
+            {
+                miss.TriggerDialogue();
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.Mouse1) && !PauseMenu.Instance.isPaused && ui.shellsCount <= 0)
+        {
+            empty.TriggerDialogue();
         }
 
         if (PauseMenu.Instance.isPaused)
-        {
-            crosshair.SetActive(false);
-        }
-        else
-        {
-            crosshair.SetActive(true);
-        }
+                {
+                    crosshair.SetActive(false);
+                }
+                else
+                {
+                    crosshair.SetActive(true);
+                }
     }
 
     public void Shoot()

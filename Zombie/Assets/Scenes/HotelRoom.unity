@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 202732842}
   - component: {fileID: 202732845}
   - component: {fileID: 202732844}
+  - component: {fileID: 202732846}
   m_Layer: 0
   m_Name: Door - Hallway
   m_TagString: Untagged
@@ -341,6 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440a8646c30a6e4ab8e439dbd4dea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 202732846}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Hallway
 --- !u!61 &202732845
@@ -389,6 +391,23 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &202732846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202732841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: I need something to protect myself.
+    - line: I have to find my gun first...
+    - line: Can't forget my gun.
 --- !u!1 &278467454
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +420,7 @@ GameObject:
   - component: {fileID: 278467456}
   - component: {fileID: 278467455}
   - component: {fileID: 278467458}
+  - component: {fileID: 278467459}
   m_Layer: 0
   m_Name: Charging Station
   m_TagString: Untagged
@@ -536,7 +556,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d479ce723d8844aa71c46763c278b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 278467459}
   rechargeCooldown: 10
+--- !u!114 &278467459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278467454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: Let it be light!
+    - line: I finally see something.
+    - line: Now I can see much better.
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,6 +1087,7 @@ GameObject:
   - component: {fileID: 1343622709}
   - component: {fileID: 1343622708}
   - component: {fileID: 1343622710}
+  - component: {fileID: 1343622711}
   m_Layer: 0
   m_Name: Vitamin 2
   m_TagString: Untagged
@@ -1175,9 +1214,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6cdadf2f6cd589478182c002f9b1918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1343622711}
   vitamin: {fileID: 1343622706}
   pickedHearts: {fileID: 11400000, guid: f4053184a8e6d6d439f1244532515108, type: 2}
   index: 1
+--- !u!114 &1343622711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343622706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: Don't need this.
+    - line: I feel fine.
+    - line: I'm not hurt.
 --- !u!1 &1472946728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,6 +1247,7 @@ GameObject:
   - component: {fileID: 1472946732}
   - component: {fileID: 1472946731}
   - component: {fileID: 1472946733}
+  - component: {fileID: 1472946734}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -1315,9 +1373,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ed1ec96a8bd4044afdfffd6a14473d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1472946734}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   gunItem: {fileID: 1472946728}
   gunPrefab: {fileID: 1734399917779393650, guid: cc56677a1d091aa42ab01c52c6c44ddb, type: 3}
+--- !u!114 &1472946734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472946728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: I hope I won't have to use this...
+    - line: I feel safer now.
+    - line: Alright, let's go.
 --- !u!1 &1487335845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,6 +1406,7 @@ GameObject:
   - component: {fileID: 1487335848}
   - component: {fileID: 1487335847}
   - component: {fileID: 1487335849}
+  - component: {fileID: 1487335850}
   m_Layer: 0
   m_Name: Vitamin 3
   m_TagString: Untagged
@@ -1456,9 +1533,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6cdadf2f6cd589478182c002f9b1918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1487335850}
   vitamin: {fileID: 1487335845}
   pickedHearts: {fileID: 11400000, guid: f4053184a8e6d6d439f1244532515108, type: 2}
   index: 2
+--- !u!114 &1487335850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487335845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: Don't need this.
+    - line: I feel fine.
+    - line: I'm not hurt.
 --- !u!1 &1554631520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,6 +1566,7 @@ GameObject:
   - component: {fileID: 1554631523}
   - component: {fileID: 1554631522}
   - component: {fileID: 1554631524}
+  - component: {fileID: 1554631525}
   m_Layer: 0
   m_Name: Vitamin 1
   m_TagString: Untagged
@@ -1597,9 +1693,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6cdadf2f6cd589478182c002f9b1918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1554631525}
   vitamin: {fileID: 1554631520}
   pickedHearts: {fileID: 11400000, guid: f4053184a8e6d6d439f1244532515108, type: 2}
   index: 0
+--- !u!114 &1554631525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554631520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: Don't need this.
+    - line: I feel fine.
+    - line: I'm not hurt.
 --- !u!1 &1655039072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,6 +1860,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 487881411560200489, guid: 6ac00786344a3064b9da406447010f30, type: 3}
+      propertyPath: locked
+      value: 
+      objectReference: {fileID: 1831973699}
+    - target: {fileID: 487881411560200489, guid: 6ac00786344a3064b9da406447010f30, type: 3}
+      propertyPath: opened
+      value: 
+      objectReference: {fileID: 1831973700}
     - target: {fileID: 487881411560200489, guid: 6ac00786344a3064b9da406447010f30, type: 3}
       propertyPath: lockCanvas
       value: 
@@ -2177,13 +2299,53 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8218220366719550880, guid: 6ac00786344a3064b9da406447010f30, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1831973699}
+    - targetCorrespondingSourceObject: {fileID: 8218220366719550880, guid: 6ac00786344a3064b9da406447010f30, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1831973700}
   m_SourcePrefab: {fileID: 100100000, guid: 6ac00786344a3064b9da406447010f30, type: 3}
 --- !u!1 &1831973698 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8218220366719550880, guid: 6ac00786344a3064b9da406447010f30, type: 3}
   m_PrefabInstance: {fileID: 1831973697}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1831973699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831973698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: Not this one...
+    - line: What was the code again?
+    - line: I can't believe I forgot the code...
+--- !u!114 &1831973700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831973698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: Bingo!
+    - line: Still remember!
+    - line: Got it!
 --- !u!1 &1844254753
 GameObject:
   m_ObjectHideFlags: 0
@@ -2196,6 +2358,7 @@ GameObject:
   - component: {fileID: 1844254756}
   - component: {fileID: 1844254755}
   - component: {fileID: 1844254754}
+  - component: {fileID: 1844254758}
   m_Layer: 0
   m_Name: Shell 3
   m_TagString: Untagged
@@ -2215,6 +2378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4331ae85e3312438e814f069251eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1844254758}
   shell: {fileID: 1844254753}
   pickedShells: {fileID: 11400000, guid: 4e3e3bfb05e155f428e179afca2a7cec, type: 2}
   index: 2
@@ -2324,6 +2488,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 119848784}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1844254758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844254753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: This will probably come in handy.
+    - line: Better safe than sorry.
+    - line: I hope I won't have to use this...
 --- !u!1 &1873832577
 GameObject:
   m_ObjectHideFlags: 0
@@ -2367,6 +2548,7 @@ GameObject:
   - component: {fileID: 1933147822}
   - component: {fileID: 1933147821}
   - component: {fileID: 1933147820}
+  - component: {fileID: 1933147824}
   m_Layer: 0
   m_Name: Shell 2
   m_TagString: Untagged
@@ -2386,6 +2568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4331ae85e3312438e814f069251eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 1933147824}
   shell: {fileID: 1933147819}
   pickedShells: {fileID: 11400000, guid: 4e3e3bfb05e155f428e179afca2a7cec, type: 2}
   index: 1
@@ -2495,6 +2678,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 119848784}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1933147824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933147819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: This will probably come in handy.
+    - line: Better safe than sorry.
+    - line: I hope I won't have to use this...
 --- !u!1 &2099774488
 GameObject:
   m_ObjectHideFlags: 0
@@ -2507,6 +2707,7 @@ GameObject:
   - component: {fileID: 2099774491}
   - component: {fileID: 2099774490}
   - component: {fileID: 2099774489}
+  - component: {fileID: 2099774493}
   m_Layer: 0
   m_Name: Shell 1
   m_TagString: Untagged
@@ -2526,6 +2727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4331ae85e3312438e814f069251eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 2099774493}
   shell: {fileID: 2099774488}
   pickedShells: {fileID: 11400000, guid: 4e3e3bfb05e155f428e179afca2a7cec, type: 2}
   index: 0
@@ -2635,6 +2837,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 119848784}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2099774493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099774488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: This will probably come in handy.
+    - line: Better safe than sorry.
+    - line: I hope I won't have to use this...
 --- !u!1001 &1927025617000002247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2934,5 +3153,5 @@ SceneRoots:
   - {fileID: 119848784}
   - {fileID: 786342148}
   - {fileID: 1319304319}
-  - {fileID: 3933095095707796343}
   - {fileID: 1831973697}
+  - {fileID: 3933095095707796343}

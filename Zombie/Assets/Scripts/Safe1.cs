@@ -24,7 +24,7 @@ public class Safe1 : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (isVisible == false)
+        if (isVisible == false && unlocked.safe1 == false)
         {
             lockCanvas.SetActive(true);
             isVisible = true;

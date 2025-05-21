@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
+    public DialogueTrigger trigger;
+
     public Containers unlocked;
     public GameObject room, storage, cardItem;
 
@@ -24,5 +26,7 @@ public class Card : MonoBehaviour
     void OnMouseDown()
     {
         unlocked.card = true;
+        
+        trigger.TriggerDialogue();
     }
 }

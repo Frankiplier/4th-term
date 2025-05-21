@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Ammo : MonoBehaviour
 {
+    public DialogueTrigger trigger;
+
     public GameObject shell;
     [SerializeField] PickedShellsList pickedShells;
     [SerializeField] int index;
@@ -27,6 +29,8 @@ public class Ammo : MonoBehaviour
         ui.shellsText.text = ui.shellsCount.ToString();
         pickedShells.pickedUpShells[index] = true;
         shell.SetActive(false);
+
+        trigger.TriggerDialogue();
     }
 
     void Awake()

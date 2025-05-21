@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class ZombieSpawner : MonoBehaviour
 {
+    public DialogueTrigger trigger;
+
     [System.Serializable]
     public class ZombieSpriteSet
     {
@@ -25,7 +27,7 @@ public class ZombieSpawner : MonoBehaviour
         while (true)
         {
             float waitTime = Random.Range(spawnIntervalMin, spawnIntervalMax);
-            
+
             yield return new WaitForSeconds(waitTime);
 
             Vector2 spawnPos = new Vector2(Random.Range(minX, maxX), spawnY);
@@ -34,6 +36,8 @@ public class ZombieSpawner : MonoBehaviour
             GameObject zombie = Instantiate(zombiePrefab, spawnPos, Quaternion.identity);
             Zombie zombieScript = zombie.GetComponent<Zombie>();
             zombieScript.SetSpriteSet(zombieSpriteSets[spriteIndex]);
+            
+            trigger.TriggerDialogue();
         }
     }
 }

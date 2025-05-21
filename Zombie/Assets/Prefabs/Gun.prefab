@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 6473510901887790719}
   - component: {fileID: 1942926160304634939}
   - component: {fileID: 6120352129622245544}
+  - component: {fileID: 1437368039544665909}
+  - component: {fileID: 8582086220408047137}
+  - component: {fileID: 4267874950383753155}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Gun
@@ -46,8 +49,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310dc46372fc39143b585445e6fca5dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: {fileID: 1437368039544665909}
+  miss: {fileID: 8582086220408047137}
+  kill: {fileID: 4267874950383753155}
   crosshair: {fileID: 4320992965317922789}
-  isVisible: 0
 --- !u!114 &6120352129622245544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +65,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f936f6af0eed66d48ba0725e1abe177a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1437368039544665909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734399917779393650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: I got no ammo!
+    - line: I need more ammo!
+    - line: Gotta find more ammo.
+--- !u!114 &8582086220408047137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734399917779393650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: Missed.
+    - line: What a waste...
+    - line: Come on, shoot straight!
+--- !u!114 &4267874950383753155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734399917779393650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: DIE!!!
+    - line: You like that???
+    - line: And stay dead!
 --- !u!1 &4320992965317922789
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5073980960422795060}
   - component: {fileID: 1754095624916904297}
   - component: {fileID: 8391472212086286089}
+  - component: {fileID: 4675732828572924559}
   m_Layer: 0
   m_Name: Crowbar
   m_TagString: Untagged
@@ -147,5 +148,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92dd75deee883a14b991ae11ca00c60d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 4675732828572924559}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   crowbarItem: {fileID: 313352467708629535}
+--- !u!114 &4675732828572924559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313352467708629535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: It has to be useful... Right?
+    - line: Does it do anything?
+    - line: Let's hope it's good for something...

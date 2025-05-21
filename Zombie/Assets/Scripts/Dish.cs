@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Dish : MonoBehaviour
 {
+    public DialogueTrigger trigger;
+    
     public Containers unlocked;
     public GameObject dishItem;
 
@@ -20,5 +22,7 @@ public class Dish : MonoBehaviour
     void OnMouseDown()
     {
         unlocked.dish = true;
+
+        trigger.TriggerDialogue();
     }
 }

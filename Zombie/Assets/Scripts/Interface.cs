@@ -36,6 +36,6 @@ public class Interface : MonoBehaviour
 
     void Start()
     {
-        shellsText.text = shellsCount.ToString();
+        shellsText.text = "x " + shellsCount.ToString();
     }
 }
