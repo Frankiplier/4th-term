@@ -9,8 +9,6 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
-
-    public string sceneName;
  
     public TextMeshProUGUI dialogueArea;
     
@@ -19,7 +17,7 @@ public class DialogueManager : MonoBehaviour
     private float typingSpeed = 0.05f;
  
  
-    private void Awake()
+    private void Update()
     {
         if (Instance == null)
             Instance = this;
@@ -50,7 +48,7 @@ public class DialogueManager : MonoBehaviour
         
         yield return new WaitForSeconds(1.5f);
 
-        if (sceneName == "EndMenu") DontEndDialogue();
+        if (SceneManager.GetActiveScene().name == "EndMenu") DontEndDialogue();
         else EndDialogue();
     }
 

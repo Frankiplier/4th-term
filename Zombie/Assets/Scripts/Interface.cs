@@ -26,7 +26,6 @@ public class Interface : MonoBehaviour
             {
                 DontDestroyOnLoad(gameObject);
             }
-
             else
             {
                 Destroy(gameObject);
@@ -37,5 +36,13 @@ public class Interface : MonoBehaviour
     void Start()
     {
         shellsText.text = "x " + shellsCount.ToString();
+    }
+
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "EndMenu")
+        {
+            Destroy(gameObject);
+        }
     }
 }

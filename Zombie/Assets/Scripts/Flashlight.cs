@@ -27,7 +27,6 @@ public class Flashlight : MonoBehaviour
             {
                 DontDestroyOnLoad(gameObject);
             }
-
             else
             {
                 Destroy(gameObject);
@@ -75,6 +74,11 @@ public class Flashlight : MonoBehaviour
         else if (PauseMenu.Instance.isPaused)
         {
             lightCone.SetActive(false);
+        }
+
+        if (SceneManager.GetActiveScene().name == "EndMenu")
+        {
+            Destroy(gameObject);
         }
     }
 

@@ -9,11 +9,18 @@ public class EndMenu : MonoBehaviour
 
     void Start()
     {
-        if (containers.keys == true && containers.dish == true)
+        StartCoroutine(TriggerDialogueWithDelay());
+    }
+
+    private IEnumerator TriggerDialogueWithDelay()
+    {
+        yield return new WaitForSeconds(1f);
+
+        if (containers.keys && containers.dish)
         {
             allItems.TriggerDialogue();
         }
-        else if (containers.keys == true || containers.dish == true)
+        else if (containers.keys || containers.dish)
         {
             oneItem.TriggerDialogue();
         }

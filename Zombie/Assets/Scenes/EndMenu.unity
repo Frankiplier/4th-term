@@ -524,8 +524,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 1327543117}
+        m_TargetAssemblyTypeName: EndMenu, Assembly-CSharp
         m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
@@ -723,10 +723,10 @@ GameObject:
   - component: {fileID: 1327543114}
   - component: {fileID: 1327543113}
   - component: {fileID: 1327543117}
-  - component: {fileID: 1327543118}
   - component: {fileID: 1327543121}
   - component: {fileID: 1327543120}
   - component: {fileID: 1327543119}
+  - component: {fileID: 1327543122}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -836,21 +836,6 @@ MonoBehaviour:
   allItems: {fileID: 1327543121}
   oneItem: {fileID: 1327543120}
   noItems: {fileID: 1327543119}
---- !u!114 &1327543118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1327543112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c062aa1d01514d44e8f65c0ad1b9a394, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: EndMenu
-  dialogueArea: {fileID: 35095025}
-  isDialogueActive: 0
 --- !u!114 &1327543119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -896,6 +881,20 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - line: All items
+--- !u!114 &1327543122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327543112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c062aa1d01514d44e8f65c0ad1b9a394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueArea: {fileID: 35095025}
+  isDialogueActive: 0
 --- !u!1 &1572810129
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,9 +1195,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 1327543117}
+        m_TargetAssemblyTypeName: EndMenu, Assembly-CSharp
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

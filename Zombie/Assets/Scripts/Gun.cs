@@ -26,7 +26,6 @@ public class Gun : MonoBehaviour
             {
                 DontDestroyOnLoad(gameObject);
             }
-
             else
             {
                 Destroy(gameObject);
@@ -75,13 +74,18 @@ public class Gun : MonoBehaviour
         }
 
         if (PauseMenu.Instance.isPaused)
-                {
-                    crosshair.SetActive(false);
-                }
-                else
-                {
-                    crosshair.SetActive(true);
-                }
+        {
+            crosshair.SetActive(false);
+        }
+        else
+        {
+            crosshair.SetActive(true);
+        }
+
+        if (SceneManager.GetActiveScene().name == "EndMenu")
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void Shoot()
