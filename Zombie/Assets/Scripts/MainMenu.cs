@@ -6,12 +6,14 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] PickedShellsList shellsList;
     [SerializeField] PickedHeartsList heartsList;
+    [SerializeField] OpenedDrawersList drawersList;
     [SerializeField] Containers containers;
 
     void Start()
     {
         shellsList.ResetList();
         heartsList.ResetList();
+        drawersList.ResetList();
         containers.ResetBools();
     }
 
