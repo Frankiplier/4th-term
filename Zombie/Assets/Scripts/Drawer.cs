@@ -14,10 +14,21 @@ public class Drawer : MonoBehaviour
         drawerOpen.SetActive(false);
     }
 
+    void Update()
+    {
+        if (checkedDrawers.openedDrawers[index] == true)
+        {
+            drawerClosed.SetActive(false);
+            drawerOpen.SetActive(true);
+        }
+    }
+
     void OnMouseDown()
     {
         drawerClosed.SetActive(false);
         drawerOpen.SetActive(true);
+
+        checkedDrawers.openedDrawers[index] = true;
 
         if (drawerOpen.transform.childCount > 0)
         {
@@ -26,15 +37,6 @@ public class Drawer : MonoBehaviour
         else
         {
             empty.TriggerDialogue();
-        }
-    }
-    
-    void Awake()
-    {
-        if (checkedDrawers.openedDrawers[index])
-        {
-            Destroy(gameObject);
-            return;
         }
     }
 }
