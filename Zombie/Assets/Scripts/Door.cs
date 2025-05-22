@@ -14,31 +14,26 @@ public class Door : MonoBehaviour
         if (sceneName == "Hallway" && unlocked.gun == false)
         {
             trigger.TriggerDialogue();
-            Debug.Log("Dialogue triggered");
             return;
         }
         if (sceneName == "Room" && unlocked.card == false)
         {
             trigger.TriggerDialogue();
-            Debug.Log("Dialogue triggered");
             return;
         }
-        else if (sceneName == "Storage" && unlocked.card == false)
+        if (sceneName == "Storage" && unlocked.card == false)
         {
             trigger.TriggerDialogue();
-            Debug.Log("Dialogue triggered");
             return;
         }
         if (sceneName == "Elevator" && unlocked.power == false)
         {
             trigger.TriggerDialogue();
-            Debug.Log("Dialogue triggered");
             return;
         }
         if (sceneName == "Restaurant" && unlocked.crowbar == false)
         {
             trigger.TriggerDialogue();
-            Debug.Log("Dialogue triggered");
             return;
         }
 

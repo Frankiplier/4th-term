@@ -1209,7 +1209,7 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - line: Let it be light!
-    - line: I finally see something.
+    - line: I can finally see something.
     - line: Now I can see much better.
 --- !u!1 &1577130669
 GameObject:

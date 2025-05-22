@@ -3,15 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
  
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
+
+    public string sceneName;
  
     public TextMeshProUGUI dialogueArea;
- 
-    private Queue<DialogueLine> lines;
     
     public bool isDialogueActive = false;
  
@@ -22,8 +23,6 @@ public class DialogueManager : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
- 
-        lines = new Queue<DialogueLine>();
     }
  
     public void StartDialogue(Dialogue dialogue)
@@ -51,7 +50,13 @@ public class DialogueManager : MonoBehaviour
         
         yield return new WaitForSeconds(1.5f);
 
-        EndDialogue();
+        if (sceneName == "EndMenu") DontEndDialogue();
+        else EndDialogue();
+    }
+
+    void DontEndDialogue()
+    {
+        isDialogueActive = true;
     }
 
     void EndDialogue()

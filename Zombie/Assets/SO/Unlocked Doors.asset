@@ -12,4 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0267ee56c231a6a45b0ba59c8ddb195f, type: 3}
   m_Name: Unlocked Doors
   m_EditorClassIdentifier: 
-  hallway2: 0
+  gun: 0
+  keys: 0
+  card: 0
+  safe1: 0
+  safe2: 0
+  power: 0
+  crowbar: 0
+  dish: 0
