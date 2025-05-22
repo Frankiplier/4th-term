@@ -6,14 +6,15 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] PickedShellsList shellsList;
     [SerializeField] PickedHeartsList heartsList;
-    [SerializeField] OpenedDrawersList drawersList;
+    [SerializeField] CollectibleSpawnRegistry registry;
     [SerializeField] Containers containers;
+
 
     void Start()
     {
         shellsList.ResetList();
         heartsList.ResetList();
-        drawersList.ResetList();
+        registry.ClearAll();
         containers.ResetBools();
     }
 

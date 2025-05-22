@@ -4,12 +4,20 @@ public class Vitamin : MonoBehaviour
 {
     public DialogueTrigger trigger;
 
-    public GameObject vitamin;
     [SerializeField] PickedHeartsList pickedHearts;
-    [SerializeField] int index;
+    [SerializeField] int vitaminIndex;
 
     private Interface ui;
     private HP hp;
+
+    void Awake()
+    {
+        if (pickedHearts.pickedUpHearts[vitaminIndex])
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
 
     void Update()
     {
@@ -24,20 +32,12 @@ public class Vitamin : MonoBehaviour
         if (hp.currentHP < hp.maxHP)
         {
             hp.AddHeart();
-            vitamin.SetActive(false);
+            pickedHearts.pickedUpHearts[vitaminIndex] = true;
+            Destroy(gameObject);
         }
         else
         {
             trigger.TriggerDialogue();
-        }
-    }
-
-    void Awake()
-    {
-        if (pickedHearts.pickedUpHearts[index])
-        {
-            Destroy(gameObject);
-            return;
         }
     }
 }

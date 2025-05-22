@@ -4,11 +4,19 @@ public class Ammo : MonoBehaviour
 {
     public DialogueTrigger trigger;
 
-    public GameObject shell;
     [SerializeField] PickedShellsList pickedShells;
-    [SerializeField] int index;
+    [SerializeField] int shellIndex;
 
     private Interface ui;
+
+    void Awake()
+    {
+        if (pickedShells.pickedUpShells[shellIndex])
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
 
     void Update()
     {
@@ -27,18 +35,9 @@ public class Ammo : MonoBehaviour
     {
         ui.shellsCount += 1;
         ui.shellsText.text = ui.shellsCount.ToString();
-        pickedShells.pickedUpShells[index] = true;
-        shell.SetActive(false);
+        pickedShells.pickedUpShells[shellIndex] = true;
+        Destroy(gameObject);
 
         trigger.TriggerDialogue();
-    }
-
-    void Awake()
-    {
-        if (pickedShells.pickedUpShells[index])
-        {
-            Destroy(gameObject);
-            return;
-        }
     }
 }

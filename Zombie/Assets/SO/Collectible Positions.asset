@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eea14cf3ce2c76f4e845e3351cb8bc65, type: 3}
-  m_Name: Drawers List
+  m_Script: {fileID: 11500000, guid: 0cd0e9bba06f39f4192765484746d70e, type: 3}
+  m_Name: Collectible Positions
   m_EditorClassIdentifier: 
-  openedDrawers: 0000000000000000
+  savedPositions: []
+  hasPosition: 

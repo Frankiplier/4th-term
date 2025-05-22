@@ -910,6 +910,7 @@ MonoBehaviour:
   shellsList: {fileID: 11400000, guid: 4e3e3bfb05e155f428e179afca2a7cec, type: 2}
   heartsList: {fileID: 11400000, guid: f4053184a8e6d6d439f1244532515108, type: 2}
   drawersList: {fileID: 11400000, guid: 3499c253770c6aa4abc407393678612a, type: 2}
+  registry: {fileID: 11400000, guid: 8a025f16429ca2b449f4913dffc7b062, type: 2}
   containers: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
 --- !u!1 &2136667299
 GameObject:

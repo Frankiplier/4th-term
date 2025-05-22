@@ -273,8 +273,6 @@ MonoBehaviour:
   full: {fileID: 9195814867646494934}
   drawerClosed: {fileID: 4356863669767971900}
   drawerOpen: {fileID: 4121503869201661567}
-  checkedDrawers: {fileID: 11400000, guid: 3499c253770c6aa4abc407393678612a, type: 2}
-  index: 0
 --- !u!114 &4986465188559701560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,5 +305,5 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - line: Bingo!
-    - line: Found ya!
-    - line: Always something!
+    - line: Found ya.
+    - line: It's always something.

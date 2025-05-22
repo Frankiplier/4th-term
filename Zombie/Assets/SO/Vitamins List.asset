@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 898e8f0580ebd134caba9b3a0c2de51d, type: 3}
   m_Name: Vitamins List
   m_EditorClassIdentifier: 
-  pickedUpHearts: 000000
+  pickedUpHearts: 00

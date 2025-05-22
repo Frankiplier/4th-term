@@ -942,6 +942,83 @@ MonoBehaviour:
     - line: Power, baby!
     - line: I can't believe it worked!
     - line: Alright, let's ride this elevator.
+--- !u!1001 &1245318701
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1761436774219027408, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
+      propertyPath: spawnerId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761436774219027408, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
+      propertyPath: spawnIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761436774219027408, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
+      propertyPath: timesSpawned
+      value: 
+      objectReference: {fileID: 11400000, guid: 6b3e1fb1c69824a4e9df11a62977e4ee, type: 2}
+    - target: {fileID: 1761436774219027408, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
+      propertyPath: spawnRegistry
+      value: 
+      objectReference: {fileID: 11400000, guid: 8a025f16429ca2b449f4913dffc7b062, type: 2}
+    - target: {fileID: 1761436774219027408, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
+      propertyPath: savedPositions
+      value: 
+      objectReference: {fileID: 11400000, guid: 8a025f16429ca2b449f4913dffc7b062, type: 2}
+    - target: {fileID: 5196333231739904253, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5196333231739904253, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5196333231739904253, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5196333231739904253, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5196333231739904253, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5196333231739904253, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5196333231739904253, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5196333231739904253, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5196333231739904253, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5196333231739904253, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8607049284347826040, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
+      propertyPath: m_Name
+      value: Collectible Spawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4bbfba8d8526eda4ea79af9d351e6f00, type: 3}
 --- !u!1 &1337015610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,6 +1612,7 @@ SceneRoots:
   - {fileID: 1596424884}
   - {fileID: 40647528}
   - {fileID: 963342347}
+  - {fileID: 1245318701}
   - {fileID: 1495886134}
   - {fileID: 1599781884}
   - {fileID: 23830455}
