@@ -28,7 +28,8 @@ public class Code : MonoBehaviour
             codeTextValue = "";
             opened.TriggerDialogue();
         }
-        else if (gameObject.tag == "Safe2" && codeTextValue == generatedCode.generatedCode2)
+
+        if (gameObject.tag == "Safe2" && codeTextValue == generatedCode.generatedCode2)
         {
             decrypted.safe2 = true;
             codeTextValue = "";

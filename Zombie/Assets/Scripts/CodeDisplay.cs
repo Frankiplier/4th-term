@@ -12,14 +12,11 @@ public class CodeDisplay : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("generatedCodeDisplay is " + (generatedCodeDisplay == null ? "NULL" : "NOT NULL"));
-        
         if (SceneManager.GetActiveScene().name == "HotelRoom")
         {
             generatedCodeDisplay.text = "Code: " + generatedCode.generatedCode1;
         }
-        
-        if (SceneManager.GetActiveScene().name == "Stairway")
+        else if (SceneManager.GetActiveScene().name == "Stairway")
         {
             generatedCodeDisplay.text = "Code: " + generatedCode.generatedCode2;
         }

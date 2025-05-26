@@ -5,8 +5,19 @@ public class Power : MonoBehaviour
     public DialogueTrigger trigger;
     
     public Containers unlocked;
+    public GameObject powerOnItem;
 
-    // some mini-game here later???
+    void Update()
+    {
+        if (unlocked.power == false)
+        {
+            powerOnItem.SetActive(false);
+        }
+        else
+        {
+            powerOnItem.SetActive(true);
+        }
+    }
 
     void OnMouseDown()
     {

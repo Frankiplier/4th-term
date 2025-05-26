@@ -6,6 +6,7 @@ using TMPro;
 public class Interface : MonoBehaviour
 {
     public static Interface Instance;
+    [SerializeField] CodeGenerator generatedCode;
 
     public Image[] heartImages;
     public TMP_Text shellsText;
