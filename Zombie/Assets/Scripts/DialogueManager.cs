@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour
     
     public bool isDialogueActive = false;
  
-    private float typingSpeed = 0.05f;
+    private float typingSpeed = 0.03f;
  
  
     private void Update()

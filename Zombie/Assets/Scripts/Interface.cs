@@ -41,7 +41,7 @@ public class Interface : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().name == "EndMenu")
+        if (SceneManager.GetActiveScene().name == "EndMenu" || SceneManager.GetActiveScene().name == "MainMenu")
         {
             Destroy(gameObject);
         }

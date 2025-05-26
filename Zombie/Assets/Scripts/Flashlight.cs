@@ -60,7 +60,7 @@ public class Flashlight : MonoBehaviour
 
             transform.localScale = new Vector3(currentBattery, currentBattery, 1f);
 
-            if (currentBattery <= maxBattery / 2 && currentBattery >= 30)
+            if (currentBattery <= maxBattery / 2 && currentBattery >= maxBattery / 2 - 2f)
             {
                 trigger.TriggerDialogue();
             }
