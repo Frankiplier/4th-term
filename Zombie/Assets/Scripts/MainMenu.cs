@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public CodeGenerator codeGenerator;
+    
     [SerializeField] PickedShellsList shellsList;
     [SerializeField] PickedHeartsList heartsList;
     [SerializeField] CollectibleSpawnRegistry registry;
@@ -12,6 +14,8 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        codeGenerator.GenerateCodes();
+
         shellsList.ResetList();
         heartsList.ResetList();
         registry.ClearAll();

@@ -410,7 +410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   safeOpen: {fileID: 307308478}
-  lockCanvas: {fileID: 1912635266}
+  lockBG: {fileID: 1912635269}
 --- !u!114 &307308484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1569,6 +1569,10 @@ PrefabInstance:
       propertyPath: lockCanvas
       value: 
       objectReference: {fileID: 1912635266}
+    - target: {fileID: 487881411560200489, guid: 6ac00786344a3064b9da406447010f30, type: 3}
+      propertyPath: generatedCode
+      value: 
+      objectReference: {fileID: 11400000, guid: f098ad3bf9974984785412807e9099b9, type: 2}
     - target: {fileID: 1470086991742619124, guid: 6ac00786344a3064b9da406447010f30, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1849,6 +1853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lock canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8218220366719550880, guid: 6ac00786344a3064b9da406447010f30, type: 3}
+      propertyPath: m_TagString
+      value: Safe2
+      objectReference: {fileID: 0}
     - target: {fileID: 8372636755994617903, guid: 6ac00786344a3064b9da406447010f30, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2043,6 +2051,11 @@ MonoBehaviour:
     - line: Not this one...
     - line: What was the code again?
     - line: I can't believe I forgot the code...
+--- !u!1 &1912635269 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5553945477626248882, guid: 6ac00786344a3064b9da406447010f30, type: 3}
+  m_PrefabInstance: {fileID: 1912635265}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1917724787
 GameObject:
   m_ObjectHideFlags: 0

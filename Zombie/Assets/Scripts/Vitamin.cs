@@ -7,7 +7,6 @@ public class Vitamin : MonoBehaviour
     [SerializeField] PickedHeartsList pickedHearts;
     [SerializeField] int vitaminIndex;
 
-    private Interface ui;
     private HP hp;
 
     void Awake()

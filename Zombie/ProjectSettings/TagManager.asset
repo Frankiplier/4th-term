@@ -8,6 +8,8 @@ TagManager:
   - Interface
   - Gun
   - Zombie
+  - Safe1
+  - Safe2
   layers:
   - Default
   - TransparentFX

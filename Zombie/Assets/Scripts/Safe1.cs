@@ -5,13 +5,13 @@ using UnityEngine;
 public class Safe1 : MonoBehaviour
 {
     public Containers unlocked;
-    public GameObject safeOpen, lockCanvas;
+    public GameObject safeOpen, lockBG;
     private bool isVisible = false;
 
     void Start()
     {
         safeOpen.SetActive(false);
-        lockCanvas.SetActive(false);
+        lockBG.SetActive(false);
     }
 
     void Update()
@@ -19,6 +19,7 @@ public class Safe1 : MonoBehaviour
         if (unlocked.safe1 == true)
         {
             safeOpen.SetActive(true);
+            lockBG.SetActive(false);
         }
     }
 
@@ -26,12 +27,12 @@ public class Safe1 : MonoBehaviour
     {
         if (isVisible == false && unlocked.safe1 == false)
         {
-            lockCanvas.SetActive(true);
+            lockBG.SetActive(true);
             isVisible = true;
         }
         else
         {
-            lockCanvas.SetActive(false);
+            lockBG.SetActive(false);
             isVisible = false;
         }
     }

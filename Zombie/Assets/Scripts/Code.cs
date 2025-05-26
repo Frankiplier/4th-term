@@ -6,37 +6,38 @@ using TMPro;
 
 public class Code : MonoBehaviour
 {
+    [SerializeField] CodeGenerator generatedCode;
     public DialogueTrigger locked, opened;
-
-    public GameObject lockCanvas;
 
     [SerializeField] TMP_Text codeText;
     string codeTextValue = "";
     public Containers decrypted;
 
+    void Start()
+    {
+        codeTextValue = "";
+    }
+
     void Update()
     {
         codeText.text = codeTextValue;
 
-        if (codeTextValue == "9205")
+        if (gameObject.tag == "Safe1" && codeTextValue == generatedCode.generatedCode1)
         {
             decrypted.safe1 = true;
-            lockCanvas.SetActive(false);
-
+            codeTextValue = "";
             opened.TriggerDialogue();
         }
-        else if (codeTextValue == "3184")
+        else if (gameObject.tag == "Safe2" && codeTextValue == generatedCode.generatedCode2)
         {
             decrypted.safe2 = true;
-            lockCanvas.SetActive(false);
-
+            codeTextValue = "";
             opened.TriggerDialogue();
         }
 
         if (codeTextValue.Length >= 4)
         {
             codeTextValue = "";
-
             locked.TriggerDialogue();
         }
     }
