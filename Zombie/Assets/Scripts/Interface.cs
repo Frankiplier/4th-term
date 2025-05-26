@@ -7,10 +7,12 @@ public class Interface : MonoBehaviour
 {
     public static Interface Instance;
     [SerializeField] CodeGenerator generatedCode;
+    [SerializeField] Containers unlocked;
 
     public Image[] heartImages;
     public TMP_Text shellsText;
     public int shellsCount = 0;
+    public GameObject card, keys, crowbar, dish;
 
     void Awake()
     {
@@ -45,5 +47,29 @@ public class Interface : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (unlocked.card == false)
+        {
+            card.SetActive(false);
+        }
+        else card.SetActive(true);
+
+        if (unlocked.keys == false)
+        {
+            keys.SetActive(false);
+        }
+        else keys.SetActive(true);
+
+        if (unlocked.crowbar == false)
+        {
+            crowbar.SetActive(false);
+        }
+        else crowbar.SetActive(true);
+
+        if (unlocked.dish == false)
+        {
+            dish.SetActive(false);
+        }
+        else dish.SetActive(true);
     }
 }
