@@ -32,12 +32,30 @@ public class Zombie : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
 
+        CameraController camController = Camera.main.GetComponent<CameraController>();
+
+        if (camController != null)
+        {
+            camController.allowMovement = false;
+
+            Camera.main.transform.position = new Vector3(transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
+            camController.SetCameraX(transform.position.x);
+        }
+
+        Camera.main.transform.position = new Vector3(transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
+
         spriteRenderer.sprite = spriteSet.form2;
+        // logic for animation
+
+        yield return new WaitForSeconds(3f);
+
         hp.RemoveHeart();
 
-        yield return new WaitForSeconds(1f);
+        if (camController != null)
+        {
+            camController.allowMovement = true;
+        }
 
-        // logic for animation
         Destroy(gameObject);
     }
 }

@@ -4,6 +4,7 @@ public class CameraController : MonoBehaviour
 {
     public float moveSpeed, minX, maxX;
     private float cameraPosX;
+    public bool allowMovement = true;
 
     void Start()
     {
@@ -12,7 +13,8 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        MoveCamera();
+        if (allowMovement)
+            MoveCamera();
     }
 
     void MoveCamera()
@@ -24,7 +26,6 @@ public class CameraController : MonoBehaviour
         {
             cameraPosX -= moveSpeed * Time.deltaTime;
         }
-        
         else if (mousePos.x > Screen.width * 0.9f || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             cameraPosX += moveSpeed * Time.deltaTime;
@@ -33,5 +34,10 @@ public class CameraController : MonoBehaviour
         cameraPosX = Mathf.Clamp(cameraPosX, minX, maxX);
 
         transform.position = new Vector3(cameraPosX, transform.position.y, transform.position.z);
+    }
+
+    public void SetCameraX(float x)
+    {
+        cameraPosX = Mathf.Clamp(x, minX, maxX);
     }
 }
