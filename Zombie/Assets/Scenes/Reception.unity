@@ -495,78 +495,6 @@ MonoBehaviour:
     - line: Locked.
     - line: Gotta find something to open it up with...
     - line: It won't open...
---- !u!1 &869199112
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 869199114}
-  - component: {fileID: 869199113}
-  - component: {fileID: 869199115}
-  m_Layer: 0
-  m_Name: ZombieSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &869199113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869199112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e13594790a19fab49afdc154947c04a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: {fileID: 869199115}
-  zombiePrefab: {fileID: 7413860057010648582, guid: b1e7abb94817d9d4eb253976cb773a31, type: 3}
-  zombieSpriteSets:
-  - form1: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    form2: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  spawnIntervalMin: 15
-  spawnIntervalMax: 30
-  minX: -5
-  maxX: 5
-  spawnY: 0
---- !u!4 &869199114
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869199112}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &869199115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869199112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    dialogueLines:
-    - line: Someone is here...
-    - line: I can hear you!
-    - line: Is someone there?!
 --- !u!1001 &943802706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1272,7 +1200,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.98039216}
   m_FlipX: 0
@@ -1299,6 +1227,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1400546278
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 552721704082669745, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
+      propertyPath: m_Name
+      value: ZombieSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423848937608627831, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423848937608627831, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423848937608627831, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423848937608627831, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423848937608627831, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423848937608627831, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423848937608627831, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423848937608627831, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423848937608627831, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423848937608627831, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232106741046560374, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
+      propertyPath: maxX
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232106741046560374, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
+      propertyPath: minX
+      value: -27
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
 --- !u!1 &1539721892
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,7 +1933,7 @@ SceneRoots:
   - {fileID: 1400005387}
   - {fileID: 255115741}
   - {fileID: 943802706}
-  - {fileID: 869199114}
+  - {fileID: 1400546278}
   - {fileID: 1688375773}
   - {fileID: 232290736}
   - {fileID: 1800857996}

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class Gun : MonoBehaviour
@@ -61,9 +62,7 @@ public class Gun : MonoBehaviour
 
             if (hit.collider != null && hit.collider.CompareTag("Zombie"))
             {
-                Destroy(hit.collider.gameObject);
-
-                kill.TriggerDialogue();
+                StartCoroutine(WaitForDeath(hit));
             }
             else
             {
@@ -93,8 +92,19 @@ public class Gun : MonoBehaviour
     public void Shoot()
     {
         audio.Play();
-        
+
         ui.shellsCount -= 1;
         ui.shellsText.text = ui.shellsCount.ToString();
+    }
+    
+    private IEnumerator WaitForDeath(RaycastHit2D hit)
+    {
+        zombie.animator.SetTrigger("Shot");
+        zombie.hasBeenShot = true;
+
+        yield return new WaitForSeconds(2f);
+
+        Destroy(hit.collider.gameObject);
+        kill.TriggerDialogue();
     }
 }

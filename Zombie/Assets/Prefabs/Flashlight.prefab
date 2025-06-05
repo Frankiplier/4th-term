@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1790268744321461159}
+  followMouseScript: {fileID: 3568641208920925416}
   lightCone: {fileID: 7024815012198759370}
   maxBattery: 70
   currentBattery: 0

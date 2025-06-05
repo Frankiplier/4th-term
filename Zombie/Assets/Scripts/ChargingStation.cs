@@ -6,7 +6,6 @@ public class ChargingStation : MonoBehaviour
     public DialogueTrigger trigger;
 
     public float rechargeCooldown;
-    private bool isCharging = false;
     private float currentCooldown = 0f;
 
     private Flashlight flashlight;
@@ -40,7 +39,6 @@ public class ChargingStation : MonoBehaviour
     {
         if (flashlight == null) yield break;
 
-        isCharging = true;
         flashlight.isCharging = true;
 
         yield return new WaitForSeconds(3f);
@@ -51,11 +49,9 @@ public class ChargingStation : MonoBehaviour
 
         currentCooldown = rechargeCooldown;
 
-
         audio1.Stop();
         audio2.Play();
 
-        isCharging = false;
         flashlight.isCharging = false;
     }
 }

@@ -6,6 +6,7 @@ public class Flashlight : MonoBehaviour
     public static Flashlight Instance;
 
     public DialogueTrigger trigger;
+    public FollowMouse followMouseScript;
 
     public GameObject lightCone;
     public float maxBattery, currentBattery, dischargeRate;
@@ -77,9 +78,9 @@ public class Flashlight : MonoBehaviour
         }
 
         if (SceneManager.GetActiveScene().name == "EndMenu")
-        {
-            Destroy(gameObject);
-        }
+            {
+                Destroy(gameObject);
+            }
     }
 
     public void RechargeBattery()

@@ -6,13 +6,14 @@ public class ZombieSpawner : MonoBehaviour
     public DialogueTrigger trigger;
 
     [System.Serializable]
-    public class ZombieSpriteSet
+    public class ZombieAnimationSet
     {
-        public Sprite form1, form2;
+        public string form1StateName;
+        public string form2StateName;
     }
 
     public GameObject zombiePrefab;
-    public ZombieSpriteSet[] zombieSpriteSets;
+    public ZombieAnimationSet[] zombieAnimationSets;
 
     public float spawnIntervalMin, spawnIntervalMax;
     public float minX, maxX, spawnY;
@@ -27,16 +28,17 @@ public class ZombieSpawner : MonoBehaviour
         while (true)
         {
             float waitTime = Random.Range(spawnIntervalMin, spawnIntervalMax);
-
+            
             yield return new WaitForSeconds(waitTime);
 
             Vector2 spawnPos = new Vector2(Random.Range(minX, maxX), spawnY);
-            int spriteIndex = Random.Range(0, zombieSpriteSets.Length);
+
+            int animIndex = Random.Range(0, zombieAnimationSets.Length);
 
             GameObject zombie = Instantiate(zombiePrefab, spawnPos, Quaternion.identity);
             Zombie zombieScript = zombie.GetComponent<Zombie>();
-            zombieScript.SetSpriteSet(zombieSpriteSets[spriteIndex]);
-            
+            zombieScript.SetAnimationSet(zombieAnimationSets[animIndex]);
+
             trigger.TriggerDialogue();
         }
     }

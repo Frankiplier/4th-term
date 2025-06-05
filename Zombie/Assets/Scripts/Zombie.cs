@@ -1,16 +1,29 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    private HP hp;
+    public List<AudioClip> idleClips, attackClips;
+    public AudioSource audioSource;
 
-    private SpriteRenderer spriteRenderer;
-    private ZombieSpawner.ZombieSpriteSet spriteSet;
+    private HP hp;
+    public Animator animator;
+    private ZombieSpawner.ZombieAnimationSet animationSet;
+
+    public bool hasBeenShot = false;
 
     void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        int r = Random.Range(0, idleClips.Count);
+        AudioClip clip = idleClips[r];
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 
     void Update()
@@ -21,33 +34,37 @@ public class Zombie : MonoBehaviour
         }
     }
 
-    public void SetSpriteSet(ZombieSpawner.ZombieSpriteSet set)
+    public void SetAnimationSet(ZombieSpawner.ZombieAnimationSet set)
     {
-        spriteSet = set;
-        spriteRenderer.sprite = spriteSet.form1;
+        animationSet = set;
+        animator.Play(animationSet.form1StateName);
+
         StartCoroutine(ChangeForm());
     }
 
     IEnumerator ChangeForm()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(7f);
+
+        if (hasBeenShot == true) yield break;
 
         CameraController camController = Camera.main.GetComponent<CameraController>();
 
         if (camController != null)
         {
             camController.allowMovement = false;
-
             Camera.main.transform.position = new Vector3(transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
             camController.SetCameraX(transform.position.x);
         }
 
-        Camera.main.transform.position = new Vector3(transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
+        animator.Play(animationSet.form2StateName);
 
-        spriteRenderer.sprite = spriteSet.form2;
-        // logic for animation
+        int r = Random.Range(0, attackClips.Count);
+        AudioClip clip = attackClips[r];
+        audioSource.clip = clip;
+        audioSource.Play();
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
 
         hp.RemoveHeart();
 
