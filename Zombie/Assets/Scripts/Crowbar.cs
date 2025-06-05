@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Crowbar : MonoBehaviour
 {
@@ -7,7 +8,14 @@ public class Crowbar : MonoBehaviour
     public Containers unlocked;
     public GameObject crowbarItem;
 
+    private SpriteRenderer spriteRenderer;
+
     public AudioSource audio;
+
+    void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     void Update()
     {
@@ -23,10 +31,18 @@ public class Crowbar : MonoBehaviour
 
     void OnMouseDown()
     {
+        StartCoroutine(Wait());
+    }
+
+    private IEnumerator Wait()
+    {
         audio.Play();
 
-        unlocked.crowbar = true;
+        spriteRenderer.sprite = null;
 
+        yield return new WaitForSeconds(1f);
+
+        unlocked.crowbar = true;
         trigger.TriggerDialogue();
     }
 }

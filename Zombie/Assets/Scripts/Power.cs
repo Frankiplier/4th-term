@@ -24,9 +24,8 @@ public class Power : MonoBehaviour
     void OnMouseDown()
     {
         audio.Play();
-        
-        unlocked.power = true;
 
+        unlocked.power = true;
         trigger.TriggerDialogue();
     }
 }

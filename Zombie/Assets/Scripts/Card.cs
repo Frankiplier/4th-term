@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Card : MonoBehaviour
 {
@@ -7,7 +8,14 @@ public class Card : MonoBehaviour
     public Containers unlocked;
     public GameObject cardItem;
 
+    private SpriteRenderer spriteRenderer;
+
     public AudioSource audio;
+
+    void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     void Update()
     {
@@ -23,10 +31,18 @@ public class Card : MonoBehaviour
 
     void OnMouseDown()
     {
+        StartCoroutine(Wait());
+    }
+
+    private IEnumerator Wait()
+    {
         audio.Play();
 
-        unlocked.card = true;
+        spriteRenderer.sprite = null;
 
+        yield return new WaitForSeconds(1f);
+
+        unlocked.card = true;
         trigger.TriggerDialogue();
     }
 }

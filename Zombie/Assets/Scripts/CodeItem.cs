@@ -17,7 +17,7 @@ public class CodeItem : MonoBehaviour
         if (isVisible == false)
         {
             audio.Play();
-            
+
             codePaper.SetActive(true);
             isVisible = true;
         }

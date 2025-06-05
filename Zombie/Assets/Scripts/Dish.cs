@@ -1,13 +1,21 @@
 using UnityEngine;
+using System.Collections;
 
 public class Dish : MonoBehaviour
 {
     public DialogueTrigger trigger;
-    
+
     public Containers unlocked;
     public GameObject dishItem;
 
+    private SpriteRenderer spriteRenderer;
+
     public AudioSource audio;
+
+    void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     void Update()
     {
@@ -23,10 +31,18 @@ public class Dish : MonoBehaviour
 
     void OnMouseDown()
     {
+        StartCoroutine(Wait());
+    }
+
+    private IEnumerator Wait()
+    {
         audio.Play();
 
-        unlocked.dish = true;
+        spriteRenderer.sprite = null;
 
+        yield return new WaitForSeconds(1f);
+
+        unlocked.dish = true;
         trigger.TriggerDialogue();
     }
 }
