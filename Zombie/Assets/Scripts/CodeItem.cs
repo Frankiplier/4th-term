@@ -5,6 +5,8 @@ public class CodeItem : MonoBehaviour
     public GameObject codePaper;
     private bool isVisible = false;
 
+    public AudioSource audio;
+
     void Start()
     {
         codePaper.SetActive(false);
@@ -14,6 +16,8 @@ public class CodeItem : MonoBehaviour
     {
         if (isVisible == false)
         {
+            audio.Play();
+            
             codePaper.SetActive(true);
             isVisible = true;
         }

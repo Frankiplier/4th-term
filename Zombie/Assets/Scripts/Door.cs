@@ -49,6 +49,11 @@ public class Door : MonoBehaviour
             yield return null;
         }
 
+        if (sceneName == "Elevator")
+        {
+            MusicManager.Instance.PlayMusic("Elevator");
+        }
+
         SceneManager.LoadScene(sceneName);
     }
 }

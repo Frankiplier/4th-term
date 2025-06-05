@@ -14,6 +14,8 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        MusicManager.Instance.PlayMusic("MainMenu");
+
         codeGenerator.GenerateCodes();
 
         shellsList.ResetList();
@@ -44,6 +46,8 @@ public class MainMenu : MonoBehaviour
         if (sceneIndex >= 0)
         {
             SceneManager.LoadScene(sceneIndex);
+
+            MusicManager.Instance.PlayMusic("Theme");
         }
 
         else

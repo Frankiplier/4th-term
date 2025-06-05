@@ -7,6 +7,8 @@ public class Card : MonoBehaviour
     public Containers unlocked;
     public GameObject cardItem;
 
+    public AudioSource audio;
+
     void Update()
     {
         if (unlocked.card == false)
@@ -21,8 +23,10 @@ public class Card : MonoBehaviour
 
     void OnMouseDown()
     {
+        audio.Play();
+
         unlocked.card = true;
-        
+
         trigger.TriggerDialogue();
     }
 }

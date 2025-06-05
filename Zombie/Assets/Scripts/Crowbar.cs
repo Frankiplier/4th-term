@@ -7,6 +7,8 @@ public class Crowbar : MonoBehaviour
     public Containers unlocked;
     public GameObject crowbarItem;
 
+    public AudioSource audio;
+
     void Update()
     {
         if (unlocked.crowbar == false)
@@ -21,6 +23,8 @@ public class Crowbar : MonoBehaviour
 
     void OnMouseDown()
     {
+        audio.Play();
+
         unlocked.crowbar = true;
 
         trigger.TriggerDialogue();

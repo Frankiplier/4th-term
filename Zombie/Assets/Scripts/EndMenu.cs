@@ -9,6 +9,8 @@ public class EndMenu : MonoBehaviour
 
     void Start()
     {
+        MusicManager.Instance.PlayMusic("MainMenu");
+        
         StartCoroutine(TriggerDialogueWithDelay());
     }
 

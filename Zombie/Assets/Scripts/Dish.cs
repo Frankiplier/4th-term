@@ -7,6 +7,8 @@ public class Dish : MonoBehaviour
     public Containers unlocked;
     public GameObject dishItem;
 
+    public AudioSource audio;
+
     void Update()
     {
         if (unlocked.dish == false)
@@ -21,6 +23,8 @@ public class Dish : MonoBehaviour
 
     void OnMouseDown()
     {
+        audio.Play();
+
         unlocked.dish = true;
 
         trigger.TriggerDialogue();

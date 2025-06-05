@@ -11,6 +11,8 @@ public class ChargingStation : MonoBehaviour
 
     private Flashlight flashlight;
 
+    public AudioSource audio1, audio2;
+
     void Update()
     {
         if (flashlight == null)
@@ -28,6 +30,8 @@ public class ChargingStation : MonoBehaviour
     {
         if (currentCooldown <= 0f && flashlight.currentBattery < flashlight.maxBattery)
         {
+            audio1.Play();
+
             StartCoroutine(ChargeFlashlight());
         }
     }
@@ -39,13 +43,17 @@ public class ChargingStation : MonoBehaviour
         isCharging = true;
         flashlight.isCharging = true;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
 
         flashlight.RechargeBattery();
 
         trigger.TriggerDialogue();
 
         currentCooldown = rechargeCooldown;
+
+
+        audio1.Stop();
+        audio2.Play();
 
         isCharging = false;
         flashlight.isCharging = false;

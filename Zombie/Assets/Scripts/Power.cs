@@ -7,6 +7,8 @@ public class Power : MonoBehaviour
     public Containers unlocked;
     public GameObject powerOnItem;
 
+    public AudioSource audio;
+
     void Update()
     {
         if (unlocked.power == false)
@@ -21,6 +23,8 @@ public class Power : MonoBehaviour
 
     void OnMouseDown()
     {
+        audio.Play();
+        
         unlocked.power = true;
 
         trigger.TriggerDialogue();

@@ -5,6 +5,9 @@ public class Drawer : MonoBehaviour
     public DialogueTrigger empty, full;
 
     public GameObject drawerClosed, drawerOpen;
+    public bool isOpen = false;
+
+    public AudioSource audio;
 
     void Start()
     {
@@ -16,6 +19,10 @@ public class Drawer : MonoBehaviour
     {
         drawerClosed.SetActive(false);
         drawerOpen.SetActive(true);
+
+        if (isOpen == false) audio.Play();
+
+        isOpen = true;
 
         if (drawerOpen.transform.childCount > 0)
         {

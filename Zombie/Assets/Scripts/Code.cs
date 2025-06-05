@@ -13,6 +13,8 @@ public class Code : MonoBehaviour
     string codeTextValue = "";
     public Containers decrypted;
 
+    public AudioSource audio1, audio2, audio3;
+
     void Start()
     {
         codeTextValue = "";
@@ -24,20 +26,30 @@ public class Code : MonoBehaviour
 
         if (gameObject.tag == "Safe1" && codeTextValue == generatedCode.generatedCode1)
         {
+            audio1.Play();
+
             decrypted.safe1 = true;
             codeTextValue = "";
             opened.TriggerDialogue();
+
+            audio3.Play();
         }
 
         if (gameObject.tag == "Safe2" && codeTextValue == generatedCode.generatedCode2)
         {
+            audio1.Play();
+
             decrypted.safe2 = true;
             codeTextValue = "";
             opened.TriggerDialogue();
+
+            audio3.Play();
         }
 
         if (codeTextValue.Length >= 4)
         {
+            audio2.Play();
+
             codeTextValue = "";
             locked.TriggerDialogue();
         }

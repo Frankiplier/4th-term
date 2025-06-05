@@ -7,6 +7,8 @@ public class Gun : MonoBehaviour
 
     public GameObject crosshair;
 
+    public AudioSource audio;
+
     public static Gun Instance;
     private Interface ui;
     private Zombie zombie;
@@ -90,6 +92,8 @@ public class Gun : MonoBehaviour
 
     public void Shoot()
     {
+        audio.Play();
+        
         ui.shellsCount -= 1;
         ui.shellsText.text = ui.shellsCount.ToString();
     }
