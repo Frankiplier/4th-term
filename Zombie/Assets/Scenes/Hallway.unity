@@ -2996,6 +2996,10 @@ PrefabInstance:
       propertyPath: minX
       value: -12
       objectReference: {fileID: 0}
+    - target: {fileID: 5232106741046560374, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
+      propertyPath: spawnY
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
