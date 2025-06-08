@@ -4,33 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class LostMenu : MonoBehaviour
 {
-    public static LostMenu Instance;
-
-    void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-        }
-
-        else
-        {
-            Instance = this;
-
-            if (SceneManager.GetActiveScene().name != "MainMenu")
-            {
-                DontDestroyOnLoad(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }
-    }
-
     void Start()
     {
         gameObject.SetActive(false);
+    }
+
+    void OnEnable()
+    {
+        Time.timeScale = 0f;
     }
 
     void Update()

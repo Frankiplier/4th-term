@@ -52,9 +52,9 @@ MonoBehaviour:
   lightCone: {fileID: 7024815012198759370}
   maxBattery: 70
   currentBattery: 0
-  dischargeRate: 10
+  dischargeRate: 1
   isCharging: 0
-  hasInitializedLostMenu: 0
+  batteryDead: 0
 --- !u!114 &3568641208920925416
 MonoBehaviour:
   m_ObjectHideFlags: 0

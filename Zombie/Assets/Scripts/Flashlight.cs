@@ -10,11 +10,8 @@ public class Flashlight : MonoBehaviour
 
     public GameObject lightCone;
     public float maxBattery, currentBattery, dischargeRate;
-    public bool isCharging = false;
+    public bool isCharging = false, batteryDead = false;
     private const string BatteryKey = "CurrentBattery";
-
-    private GameObject lostMenu;
-    public bool hasInitializedLostMenu = false;
 
     void Awake()
     {
@@ -61,18 +58,21 @@ public class Flashlight : MonoBehaviour
 
             lightCone.SetActive(true);
 
-            currentBattery -= dischargeRate * Time.deltaTime;
-            currentBattery = Mathf.Max(currentBattery, 0f);
-
-            transform.localScale = new Vector3(currentBattery, currentBattery, 1f);
-
-            if (currentBattery <= maxBattery / 2 && currentBattery >= maxBattery / 2 - 2f)
+            if (!batteryDead && currentBattery > 0f)
             {
-                trigger.TriggerDialogue();
-            }
-            else if (currentBattery == 0f)
-            {
-                GameOver();
+                currentBattery -= dischargeRate * Time.deltaTime;
+                currentBattery = Mathf.Max(currentBattery, 0f);
+
+                transform.localScale = new Vector3(currentBattery, currentBattery, 1f);
+
+                if (currentBattery <= maxBattery / 2 && currentBattery >= maxBattery / 2 - 2f)
+                {
+                    trigger.TriggerDialogue();
+                }
+                else if (currentBattery == 0f)
+                {
+                    batteryDead = true;
+                }
             }
 
             PlayerPrefs.SetFloat(BatteryKey, currentBattery);
@@ -98,14 +98,9 @@ public class Flashlight : MonoBehaviour
     {
         currentBattery = maxBattery;
         isCharging = false;
+        batteryDead = false;
 
         PlayerPrefs.SetFloat(BatteryKey, currentBattery);
-    }
-
-    void GameOver()
-    {
-        Time.timeScale = 0;
-        LostMenu.Instance.gameObject.SetActive(true);
     }
 
     void OnApplicationQuit()

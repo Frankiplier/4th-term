@@ -6,7 +6,7 @@ public class HP : MonoBehaviour
 
     public int currentHP = 3, maxHP = 3;
 
-    private bool hasInitializedLostMenu = false;
+    public GameObject lostMenu;
 
     public void RemoveHeart()
     {
@@ -35,7 +35,6 @@ public class HP : MonoBehaviour
 
     void GameOver()
     {
-        Time.timeScale = 0;
-        LostMenu.Instance.gameObject.SetActive(true);
+        lostMenu.SetActive(true);
     }
 }
