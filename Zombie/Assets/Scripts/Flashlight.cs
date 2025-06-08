@@ -13,6 +13,9 @@ public class Flashlight : MonoBehaviour
     public bool isCharging = false;
     private const string BatteryKey = "CurrentBattery";
 
+    private GameObject lostMenu;
+    public bool hasInitializedLostMenu = false;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -67,7 +70,7 @@ public class Flashlight : MonoBehaviour
             {
                 trigger.TriggerDialogue();
             }
-            else if (currentBattery <= 0f)
+            else if (currentBattery == 0f)
             {
                 GameOver();
             }
@@ -84,10 +87,11 @@ public class Flashlight : MonoBehaviour
             followMouseScript.enabled = false;
         }
 
-        if (SceneManager.GetActiveScene().name == "EndMenu")
-            {
-                Destroy(gameObject);
-            }
+        if (SceneManager.GetActiveScene().name == "EndMenu" || SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            Destroy(gameObject);
+            PlayerPrefs.DeleteKey(BatteryKey);
+        }
     }
 
     public void RechargeBattery()
@@ -100,7 +104,8 @@ public class Flashlight : MonoBehaviour
 
     void GameOver()
     {
-        Debug.Log("You lost!");
+        Time.timeScale = 0;
+        LostMenu.Instance.gameObject.SetActive(true);
     }
 
     void OnApplicationQuit()

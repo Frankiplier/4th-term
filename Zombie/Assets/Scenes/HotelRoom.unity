@@ -3427,6 +3427,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 116398643445588093, guid: d481656326de1b341b6dfa28ac308084, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6444421768745316534, guid: d481656326de1b341b6dfa28ac308084, type: 3}
       propertyPath: m_Name
       value: Menu Canvas
@@ -3512,7 +3516,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8643287773239691840, guid: d481656326de1b341b6dfa28ac308084, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d481656326de1b341b6dfa28ac308084, type: 3}

@@ -10,6 +10,7 @@ TagManager:
   - Zombie
   - Safe1
   - Safe2
+  - LostMenu
   layers:
   - Default
   - TransparentFX

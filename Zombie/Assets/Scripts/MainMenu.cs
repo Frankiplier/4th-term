@@ -14,6 +14,8 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
+        
         MusicManager.Instance.PlayMusic("MainMenu");
 
         codeGenerator.GenerateCodes();

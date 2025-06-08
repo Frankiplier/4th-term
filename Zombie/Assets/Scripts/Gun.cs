@@ -83,7 +83,7 @@ public class Gun : MonoBehaviour
             crosshair.SetActive(true);
         }
 
-        if (SceneManager.GetActiveScene().name == "EndMenu")
+        if (SceneManager.GetActiveScene().name == "EndMenu" || SceneManager.GetActiveScene().name == "MainMenu")
         {
             Destroy(gameObject);
         }

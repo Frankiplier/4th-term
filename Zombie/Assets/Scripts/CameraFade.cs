@@ -31,6 +31,8 @@ public class CameraFade : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
+
         alpha = 1f;
         time = 0f;
         direction = 1;

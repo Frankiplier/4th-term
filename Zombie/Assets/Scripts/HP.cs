@@ -6,6 +6,8 @@ public class HP : MonoBehaviour
 
     public int currentHP = 3, maxHP = 3;
 
+    private bool hasInitializedLostMenu = false;
+
     public void RemoveHeart()
     {
         if (currentHP <= 0) return;
@@ -17,7 +19,7 @@ public class HP : MonoBehaviour
 
         if (currentHP == 0)
         {
-            Debug.Log("Game Over");
+            GameOver();
         }
     }
 
@@ -29,5 +31,11 @@ public class HP : MonoBehaviour
         currentHP++;
 
         heal.TriggerDialogue();
+    }
+
+    void GameOver()
+    {
+        Time.timeScale = 0;
+        LostMenu.Instance.gameObject.SetActive(true);
     }
 }
