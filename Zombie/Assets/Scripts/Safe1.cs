@@ -8,6 +8,8 @@ public class Safe1 : MonoBehaviour
     public GameObject safeOpen, lockBG;
     private bool isVisible = false;
 
+    public CameraController cam;
+
     void Start()
     {
         safeOpen.SetActive(false);
@@ -27,11 +29,15 @@ public class Safe1 : MonoBehaviour
     {
         if (isVisible == false && unlocked.safe1 == false)
         {
+            cam.allowMovement = false;
+
             lockBG.SetActive(true);
             isVisible = true;
         }
         else
         {
+            cam.allowMovement = true;
+
             lockBG.SetActive(false);
             isVisible = false;
         }

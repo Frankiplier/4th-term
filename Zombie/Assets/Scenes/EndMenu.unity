@@ -725,6 +725,7 @@ GameObject:
   - component: {fileID: 1327543117}
   - component: {fileID: 1327543121}
   - component: {fileID: 1327543120}
+  - component: {fileID: 1327543123}
   - component: {fileID: 1327543119}
   - component: {fileID: 1327543122}
   m_Layer: 5
@@ -834,7 +835,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   containers: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   allItems: {fileID: 1327543121}
-  oneItem: {fileID: 1327543120}
+  keyItem: {fileID: 1327543120}
+  dishItem: {fileID: 1327543123}
   noItems: {fileID: 1327543119}
 --- !u!114 &1327543119
 MonoBehaviour:
@@ -850,7 +852,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     dialogueLines:
-    - line: No items
+    - line: You found nothing in the hotel that could help you survive your escape
+        from the hotel. Without energy or transport, a swarm of zombies quickly caught
+        up with you. You were eaten.
 --- !u!114 &1327543120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,7 +869,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     dialogueLines:
-    - line: One item
+    - line: Thanks to the car keys you found in the safe, you've managed to get to
+        safety from the zombie-infested hotel. Unfortunately, when you stopped at
+        a petrol station on the way to buy something to eat, you were attacked by
+        a zombie petrol station attendant. You are bitten.
 --- !u!114 &1327543121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,7 +887,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     dialogueLines:
-    - line: All items
+    - line: With the car keys you found in the safe, you were able to quickly escape
+        from the zombie-infested hotel. The food you found in the restaurant helped
+        you survive the long and exhausting journey. You have finally reached the
+        safety of the survivors' camp. You are safe.
 --- !u!114 &1327543122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -895,6 +905,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueArea: {fileID: 35095025}
   isDialogueActive: 0
+--- !u!114 &1327543123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327543112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d441ef8fb28fd42a3da0a19e575565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    dialogueLines:
+    - line: The food you found in the restaurant energised you, but the long walk
+        left you incredibly tired. You decided to sit down on a bench to rest for
+        a moment and didn't notice the zombie approaching you from behind. You are
+        bitten.
 --- !u!1 &1572810129
 GameObject:
   m_ObjectHideFlags: 0

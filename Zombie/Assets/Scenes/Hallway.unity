@@ -2122,6 +2122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trigger: {fileID: 1500540672}
   rechargeCooldown: 15
+  cam: {fileID: 892736401}
   audio1: {fileID: 1500540673}
   audio2: {fileID: 1500540674}
 --- !u!61 &1500540669

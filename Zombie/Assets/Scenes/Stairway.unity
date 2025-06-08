@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 474723326}
   - component: {fileID: 474723325}
   - component: {fileID: 474723324}
+  - component: {fileID: 474723328}
   - component: {fileID: 474723323}
   m_Layer: 0
   m_Name: Main Camera
@@ -305,6 +306,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &474723328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474723322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192a09ab711174f4a96710228a509a59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  minX: 0
+  maxX: 0
+  allowMovement: 1
 --- !u!1 &660681977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,6 +1496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codePaper: {fileID: 1237462579}
   audio: {fileID: 1846982763}
+  cam: {fileID: 474723328}
 --- !u!60 &1846982760
 PolygonCollider2D:
   m_ObjectHideFlags: 0

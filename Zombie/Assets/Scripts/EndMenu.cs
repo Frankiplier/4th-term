@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class EndMenu : MonoBehaviour
 {
     [SerializeField] Containers containers;
-    public DialogueTrigger allItems, oneItem, noItems;
+    public DialogueTrigger allItems, keyItem, dishItem, noItems;
 
     void Start()
     {
@@ -22,9 +22,13 @@ public class EndMenu : MonoBehaviour
         {
             allItems.TriggerDialogue();
         }
-        else if (containers.keys || containers.dish)
+        else if (containers.keys)
         {
-            oneItem.TriggerDialogue();
+            keyItem.TriggerDialogue();
+        }
+        else if (containers.dish)
+        {
+            dishItem.TriggerDialogue();
         }
         else
         {

@@ -348,6 +348,7 @@ MonoBehaviour:
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   safeOpen: {fileID: 307308478}
   lockBG: {fileID: 1912635269}
+  cam: {fileID: 1577130671}
 --- !u!114 &307308484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1445,6 +1446,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 487881411560200489, guid: 6ac00786344a3064b9da406447010f30, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1577130671}
     - target: {fileID: 487881411560200489, guid: 6ac00786344a3064b9da406447010f30, type: 3}
       propertyPath: audio1
       value: 

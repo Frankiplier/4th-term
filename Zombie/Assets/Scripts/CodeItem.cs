@@ -6,6 +6,7 @@ public class CodeItem : MonoBehaviour
     private bool isVisible = false;
 
     public AudioSource audio;
+    public CameraController cam;
 
     void Start()
     {
@@ -17,12 +18,15 @@ public class CodeItem : MonoBehaviour
         if (isVisible == false)
         {
             audio.Play();
+            cam.allowMovement = false;
 
             codePaper.SetActive(true);
             isVisible = true;
         }
         else
         {
+            cam.allowMovement = true;
+
             codePaper.SetActive(false);
             isVisible = false;
         }

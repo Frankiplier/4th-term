@@ -54,6 +54,8 @@ public class Flashlight : MonoBehaviour
     {
         if (!isCharging && !PauseMenu.Instance.isPaused && !CameraFade.Instance.IsFading())
         {
+            followMouseScript.enabled = true;
+
             lightCone.SetActive(true);
 
             currentBattery -= dischargeRate * Time.deltaTime;
@@ -75,6 +77,11 @@ public class Flashlight : MonoBehaviour
         else if (PauseMenu.Instance.isPaused)
         {
             lightCone.SetActive(false);
+        }
+
+        if (isCharging)
+        {
+            followMouseScript.enabled = false;
         }
 
         if (SceneManager.GetActiveScene().name == "EndMenu")

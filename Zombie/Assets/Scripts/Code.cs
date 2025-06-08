@@ -14,6 +14,7 @@ public class Code : MonoBehaviour
     public Containers decrypted;
 
     public AudioSource audio1, audio2, audio3;
+    public CameraController cam;
 
     void Start()
     {
@@ -33,6 +34,7 @@ public class Code : MonoBehaviour
             opened.TriggerDialogue();
 
             audio3.Play();
+            cam.allowMovement = true;
         }
 
         if (gameObject.tag == "Safe2" && codeTextValue == generatedCode.generatedCode2)
@@ -44,11 +46,13 @@ public class Code : MonoBehaviour
             opened.TriggerDialogue();
 
             audio3.Play();
+            cam.allowMovement = true;
         }
 
         if (codeTextValue.Length >= 4)
         {
             audio2.Play();
+            cam.allowMovement = true;
 
             codeTextValue = "";
             locked.TriggerDialogue();

@@ -9,6 +9,7 @@ public class ChargingStation : MonoBehaviour
     private float currentCooldown = 0f;
 
     private Flashlight flashlight;
+    public CameraController cam;
 
     public AudioSource audio1, audio2;
 
@@ -40,6 +41,7 @@ public class ChargingStation : MonoBehaviour
         if (flashlight == null) yield break;
 
         flashlight.isCharging = true;
+        cam.allowMovement = false;
 
         yield return new WaitForSeconds(3f);
 
@@ -53,5 +55,6 @@ public class ChargingStation : MonoBehaviour
         audio2.Play();
 
         flashlight.isCharging = false;
+        cam.allowMovement = true;
     }
 }
