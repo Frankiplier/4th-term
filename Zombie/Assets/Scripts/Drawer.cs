@@ -4,7 +4,7 @@ public class Drawer : MonoBehaviour
 {
     public DialogueTrigger empty, full;
 
-    public GameObject drawerClosed, drawerOpen;
+    public GameObject drawerClosed, drawerOpen, holder;
     public bool isOpen = false;
 
     public AudioSource audio;
@@ -24,7 +24,7 @@ public class Drawer : MonoBehaviour
 
         isOpen = true;
 
-        if (drawerOpen.transform.childCount > 0)
+        if (holder.transform.childCount > 0)
         {
             full.TriggerDialogue();
         }
