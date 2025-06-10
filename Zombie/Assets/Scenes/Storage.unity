@@ -792,7 +792,6 @@ MonoBehaviour:
   - {fileID: 1955401472}
   locations:
   - {fileID: 1616011838}
-  - {fileID: 1616011839}
 --- !u!1 &495968784
 GameObject:
   m_ObjectHideFlags: 0
@@ -2264,11 +2263,6 @@ PrefabInstance:
 --- !u!1 &1616011838 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8589733089332005693, guid: 41171290c985d124fbcad66f4fa79823, type: 3}
-  m_PrefabInstance: {fileID: 1616011837}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1616011839 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 193136284666560345, guid: 41171290c985d124fbcad66f4fa79823, type: 3}
   m_PrefabInstance: {fileID: 1616011837}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1665478368

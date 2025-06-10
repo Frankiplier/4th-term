@@ -492,9 +492,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     dialogueLines:
-    - line: Locked.
-    - line: Gotta find something to open it up with...
-    - line: It won't open...
+    - line: Huh, door is jammed. I need something to open it.
+    - line: Door won't budge... I think I saw a crowbar somewhere before, could be
+        useful.
+    - line: I could use a crowbar to open this door, haven't I seen one before?
 --- !u!1001 &943802706
 PrefabInstance:
   m_ObjectHideFlags: 0

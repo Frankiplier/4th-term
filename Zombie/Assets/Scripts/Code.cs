@@ -52,7 +52,6 @@ public class Code : MonoBehaviour
         if (codeTextValue.Length >= 4)
         {
             audio2.Play();
-            cam.allowMovement = true;
 
             codeTextValue = "";
             locked.TriggerDialogue();

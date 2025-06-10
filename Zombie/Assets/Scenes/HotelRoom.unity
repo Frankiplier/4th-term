@@ -448,11 +448,6 @@ MonoBehaviour:
     - line: If I'm going out there, I need something to protect myself.
     - line: I have to find my gun first, who knows what's out there?
     - line: Can't forget my gun, I have a feeling I might need it.
---- !u!1 &354329540 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 193136284666560345, guid: 41171290c985d124fbcad66f4fa79823, type: 3}
-  m_PrefabInstance: {fileID: 96769200}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &466475824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2565,7 +2560,6 @@ MonoBehaviour:
   - {fileID: 553646643}
   locations:
   - {fileID: 96769202}
-  - {fileID: 354329540}
 --- !u!1001 &1766563964
 PrefabInstance:
   m_ObjectHideFlags: 0
