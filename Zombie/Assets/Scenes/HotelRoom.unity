@@ -445,9 +445,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     dialogueLines:
-    - line: I need something to protect myself.
-    - line: I have to find my gun first...
-    - line: Can't forget my gun.
+    - line: If I'm going out there, I need something to protect myself.
+    - line: I have to find my gun first, who knows what's out there?
+    - line: Can't forget my gun, I have a feeling I might need it.
 --- !u!1 &354329540 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 193136284666560345, guid: 41171290c985d124fbcad66f4fa79823, type: 3}
@@ -484,6 +484,14 @@ PrefabInstance:
     - target: {fileID: 6787678716053899722, guid: 438b8fae6f9150942bf5af004e72397e, type: 3}
       propertyPath: shellIndex
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859036873214685626, guid: 438b8fae6f9150942bf5af004e72397e, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859036873214685626, guid: 438b8fae6f9150942bf5af004e72397e, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.data[0].line
+      value: I will definitely need more...
       objectReference: {fileID: 0}
     - target: {fileID: 8022297139505343589, guid: 438b8fae6f9150942bf5af004e72397e, type: 3}
       propertyPath: m_LocalScale.x
@@ -859,6 +867,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1473060534909349339, guid: 258d15b4c60e5c045b8f6ce2789f0268, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.data[0].line
+      value: This will be helpful when I get hurt.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473060534909349339, guid: 258d15b4c60e5c045b8f6ce2789f0268, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.data[1].line
+      value: I don't need this now, I feel great.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473060534909349339, guid: 258d15b4c60e5c045b8f6ce2789f0268, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.data[2].line
+      value: I'm not hurt... Yet...
+      objectReference: {fileID: 0}
     - target: {fileID: 4108585975048293910, guid: 258d15b4c60e5c045b8f6ce2789f0268, type: 3}
       propertyPath: m_Name
       value: Vitamin
@@ -1817,9 +1837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     dialogueLines:
-    - line: Now I can go.
-    - line: I feel safer now.
-    - line: Alright, let's go.
+    - line: Now I can go out. How do I shoot... Right click, right?
 --- !u!82 &1472946735
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2147,9 +2165,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     dialogueLines:
+    - line: Now I can see much better.
     - line: Let it be light!
     - line: I can finally see something.
-    - line: Now I can see much better.
 --- !u!114 &1484969873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2579,6 +2597,14 @@ PrefabInstance:
     - target: {fileID: 6787678716053899722, guid: 438b8fae6f9150942bf5af004e72397e, type: 3}
       propertyPath: shellIndex
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859036873214685626, guid: 438b8fae6f9150942bf5af004e72397e, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859036873214685626, guid: 438b8fae6f9150942bf5af004e72397e, type: 3}
+      propertyPath: dialogue.dialogueLines.Array.data[0].line
+      value: Gotta find more ammo for the gun.
       objectReference: {fileID: 0}
     - target: {fileID: 8022297139505343589, guid: 438b8fae6f9150942bf5af004e72397e, type: 3}
       propertyPath: m_LocalScale.x

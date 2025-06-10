@@ -116,7 +116,7 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - line: DIE!!!
-    - line: You like that???
+    - line: Boom! You like that???
     - line: And stay dead!
 --- !u!82 &6932599789677989996
 AudioSource:

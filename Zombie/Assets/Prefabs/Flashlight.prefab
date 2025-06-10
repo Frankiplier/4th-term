@@ -81,9 +81,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     dialogueLines:
-    - line: It's getting dark...
-    - line: Where are the batteries?
-    - line: I need more power...
+    - line: It's getting dark... Gotta recharge the flashlight.
+    - line: I need to charge the flashlight soon...
+    - line: I can't see shit, I need to find a charging station for my flashlight.
 --- !u!1 &7024815012198759370
 GameObject:
   m_ObjectHideFlags: 0
