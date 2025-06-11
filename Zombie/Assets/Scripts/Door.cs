@@ -10,7 +10,7 @@ public class Door : MonoBehaviour
     public Containers unlocked;
     public string sceneName;
 
-    AudioSource audio;
+    public AudioSource audio;
 
     void OnMouseDown()
     {
