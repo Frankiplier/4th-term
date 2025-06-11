@@ -2655,7 +2655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     dialogueLines:
-    - line: Shit, I think I overslept... I feel like something really bad has happened...
+    - line: Shit, I overslept... I kinda feel like something really bad has happened...
 --- !u!114 &6022844083053719506
 MonoBehaviour:
   m_ObjectHideFlags: 0
