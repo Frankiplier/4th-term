@@ -16,10 +16,16 @@ public class DialogueManager : MonoBehaviour
  
     private float typingSpeed = 0.03f;
  
-    private void Update()
+    private void Awake()
     {
         if (Instance == null)
+        {
             Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
  
     public void StartDialogue(Dialogue dialogue)

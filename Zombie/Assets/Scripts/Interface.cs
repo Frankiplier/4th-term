@@ -14,6 +14,8 @@ public class Interface : MonoBehaviour
     public int shellsCount = 0;
     public GameObject card, keys, crowbar, dish;
 
+    public DialogueTrigger tutorial;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -39,6 +41,11 @@ public class Interface : MonoBehaviour
     void Start()
     {
         shellsText.text = "x " + shellsCount.ToString();
+
+        if (tutorial != null && tutorial.dialogue != null && tutorial.dialogue.dialogueLines.Count > 0)
+        {
+            tutorial.TriggerDialogue();
+        }
     }
 
     void Update()

@@ -48,7 +48,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18317a12b5ca13a45ac7c7b83692d1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorial: {fileID: 5144835898009764287}
   trigger: {fileID: 1790268744321461159}
   followMouseScript: {fileID: 3568641208920925416}
   lightCone: {fileID: 7024815012198759370}
@@ -99,7 +98,7 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - line: It's getting dark... Gotta recharge the flashlight.
-    - line: I need to charge the flashlight soon...
+    - line: I'll need to charge the flashlight soon...
     - line: I can't see shit, I need to find a charging station for my flashlight.
 --- !u!1 &7024815012198759370
 GameObject:
