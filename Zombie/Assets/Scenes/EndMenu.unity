@@ -872,7 +872,7 @@ MonoBehaviour:
     - line: Thanks to the car keys you found in the safe, you've managed to get to
         safety from the zombie-infested hotel. Unfortunately, when you stopped at
         a petrol station on the way to buy something to eat, you were attacked by
-        a zombie petrol station attendant. You are bitten.
+        a zombie petrol station attendant. You got bitten.
 --- !u!114 &1327543121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -921,7 +921,7 @@ MonoBehaviour:
     dialogueLines:
     - line: The food you found in the restaurant energised you, but the long walk
         left you incredibly tired. You decided to sit down on a bench to rest for
-        a moment and didn't notice the zombie approaching you from behind. You are
+        a moment and didn't notice the zombie approaching you from behind. You were
         bitten.
 --- !u!1 &1572810129
 GameObject:

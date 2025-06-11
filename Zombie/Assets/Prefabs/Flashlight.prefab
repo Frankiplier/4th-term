@@ -50,7 +50,7 @@ MonoBehaviour:
   trigger: {fileID: 1790268744321461159}
   followMouseScript: {fileID: 3568641208920925416}
   lightCone: {fileID: 7024815012198759370}
-  maxBattery: 100
+  maxBattery: 80
   currentBattery: 0
   dischargeRate: 1
   isCharging: 0
