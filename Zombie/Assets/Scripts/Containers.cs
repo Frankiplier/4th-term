@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Containers")]
 public class Containers : ScriptableObject
 {
-    public bool gun = false, keys = false, card = false, safe1 = false, safe2 = false, power = false, crowbar = false, dish = false;
+    public bool gun = false, keys = false, card = false, safe1 = false, safe2 = false, power = false, crowbar = false, door = false, dish = false;
 
     public void ResetBools()
     {
@@ -14,6 +14,7 @@ public class Containers : ScriptableObject
         safe2 = false;
         power = false;
         crowbar = false;
+        door = false;
         dish = false;
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class BackgroundChange : MonoBehaviour
 {
     public string sceneName;
-    public bool isOpen = false;
 
     public SpriteRenderer sr;
     public Sprite[] spriteArray;
@@ -25,22 +24,13 @@ public class BackgroundChange : MonoBehaviour
                 sr.sprite = spriteArray[0];
             }
         }
-
-        if (isOpen == true)
-        {
-            sr.sprite = spriteArray[1];
-        }
     }
 
-    void OnMouseDown()
+    void Update()
     {
-        if (sceneName == "Reception")
+        if (sceneName == "Reception" && unlocked.door == true)
         {
-            if (unlocked.crowbar == true)
-            {
-                sr.sprite = spriteArray[1];
-                isOpen = true;
-            }
+            sr.sprite = spriteArray[1];
         }
     }
 }

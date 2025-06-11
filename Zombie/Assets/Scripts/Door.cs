@@ -10,6 +10,8 @@ public class Door : MonoBehaviour
     public Containers unlocked;
     public string sceneName;
 
+    AudioSource audio;
+
     void OnMouseDown()
     {
         if (sceneName == "Hallway" && unlocked.gun == false)
@@ -17,28 +19,34 @@ public class Door : MonoBehaviour
             trigger.TriggerDialogue();
             return;
         }
+
         if (sceneName == "Room" && unlocked.card == false)
         {
             trigger.TriggerDialogue();
             return;
         }
+
         if (sceneName == "Storage" && unlocked.card == false)
         {
             trigger.TriggerDialogue();
             return;
         }
+
         if (sceneName == "Reception" && unlocked.power == false)
         {
             trigger.TriggerDialogue();
             return;
         }
+
         if (sceneName == "Restaurant" && unlocked.crowbar == false)
         {
             trigger.TriggerDialogue();
             return;
         }
-        else if (sceneName == "Restaurant" && unlocked.crowbar == true && bg.isOpen == false)
+        else if (sceneName == "Restaurant" && unlocked.crowbar == true && unlocked.door == false)
         {
+            unlocked.door = true;
+            audio.Play();
             open.TriggerDialogue();
             return;
         }

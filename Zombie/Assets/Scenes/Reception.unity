@@ -634,6 +634,7 @@ GameObject:
   - component: {fileID: 671969246}
   - component: {fileID: 671969250}
   - component: {fileID: 671969251}
+  - component: {fileID: 671969252}
   m_Layer: 0
   m_Name: Door - Restaurant
   m_TagString: Untagged
@@ -809,6 +810,103 @@ MonoBehaviour:
     - line: Alright! Now what's on the menu?
     - line: Thank god it worked, I am starving!
     - line: Great, now let's grab a quick bite and hit the road
+--- !u!82 &671969252
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671969245}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1d01299e8e692bc4b87dd014b244cae6, type: 3}
+  m_Resource: {fileID: 8300000, guid: 1d01299e8e692bc4b87dd014b244cae6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &943802706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -987,7 +1085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 192a09ab711174f4a96710228a509a59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 12
+  moveSpeed: 15
   minX: -43
   maxX: 43
   allowMovement: 1
@@ -1620,7 +1718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5232106741046560374, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
       propertyPath: minX
-      value: -37
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 5232106741046560374, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
       propertyPath: spawnY
@@ -1628,7 +1726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5232106741046560374, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
       propertyPath: spawnIntervalMax
-      value: 37
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5232106741046560374, guid: 756648418f16a8e4b8096b371bc65c76, type: 3}
       propertyPath: spawnIntervalMin
@@ -2318,7 +2416,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Reception
-  isOpen: 0
   sr: {fileID: 1918471796}
   spriteArray:
   - {fileID: 21300000, guid: fc261409e0553494591f11ffee0d637b, type: 3}
@@ -2511,11 +2608,11 @@ SceneRoots:
   - {fileID: 1539721896}
   - {fileID: 1793000329}
   - {fileID: 671969249}
+  - {fileID: 1786818455}
+  - {fileID: 286414243}
   - {fileID: 313001903}
   - {fileID: 2027889702}
   - {fileID: 641871412}
-  - {fileID: 1786818455}
-  - {fileID: 286414243}
   - {fileID: 272258352}
   - {fileID: 1612148797}
   - {fileID: 414981533}
