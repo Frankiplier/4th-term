@@ -45,7 +45,7 @@ public class Ammo : MonoBehaviour
         spriteRenderer.sprite = null;
 
         ui.shellsCount += 1;
-        ui.shellsText.text = ui.shellsCount.ToString();
+        ui.shellsText.text = "x " + ui.shellsCount.ToString();
         pickedShells.pickedUpShells[shellIndex] = true;
 
         yield return new WaitForSeconds(1f);

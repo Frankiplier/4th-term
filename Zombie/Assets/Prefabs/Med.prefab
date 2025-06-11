@@ -126,7 +126,7 @@ PrefabInstance:
     - target: {fileID: 4937854440336501190, guid: 6ac9549ad873ef94c9162b47e1ee4578, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 311068567e3faf9458e6786b17f7b8d7, type: 3}
+      objectReference: {fileID: 21300000, guid: c5a40af2e2dfbe44e95cfe984038b3b1, type: 3}
     - target: {fileID: 5482498564878904030, guid: 6ac9549ad873ef94c9162b47e1ee4578, type: 3}
       propertyPath: index
       value: 5
@@ -182,7 +182,7 @@ PrefabInstance:
     - target: {fileID: 7741875593285734723, guid: 6ac9549ad873ef94c9162b47e1ee4578, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 345c63dbff8b97f489d20383ce6e4e1f, type: 3}
+      objectReference: {fileID: 21300000, guid: 85e878918043fc54c94407a110bb5a52, type: 3}
     - target: {fileID: 9057276031775700617, guid: 6ac9549ad873ef94c9162b47e1ee4578, type: 3}
       propertyPath: m_Name
       value: Med
