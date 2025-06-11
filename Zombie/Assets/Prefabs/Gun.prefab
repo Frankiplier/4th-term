@@ -116,7 +116,7 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - line: DIE!!!
-    - line: Boom! You like that???
+    - line: I never liked zombies.
     - line: And stay dead!
 --- !u!82 &6932599789677989996
 AudioSource:

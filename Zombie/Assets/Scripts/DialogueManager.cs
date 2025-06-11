@@ -16,7 +16,6 @@ public class DialogueManager : MonoBehaviour
  
     private float typingSpeed = 0.03f;
  
- 
     private void Update()
     {
         if (Instance == null)

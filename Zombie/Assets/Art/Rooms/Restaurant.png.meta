@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4ca6030687d895e46b0fe3884144358f
+guid: 2a41ec73ca5e0954083c28959625575c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3206198842441005096
-    second: Restaurant_0
+      213: 7357547172559476372
+    second: RestaurantNew_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Restaurant_0
+      name: RestaurantNew_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8d70905d32b4183d0800000000000000
-      internalID: -3206198842441005096
+      spriteID: 4965696eb224b1660800000000000000
+      internalID: 7357547172559476372
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Restaurant_0: -3206198842441005096
+      RestaurantNew_0: 7357547172559476372
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
