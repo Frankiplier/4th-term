@@ -2134,6 +2134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d96ecc9c3030b1448c50021e774da3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: Hallway
   sr: {fileID: 1009782138}
   spriteArray:
   - {fileID: 21300000, guid: 5b09b102fa86db049b5af258acc03f52, type: 3}

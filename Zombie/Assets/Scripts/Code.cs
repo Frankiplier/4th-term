@@ -16,6 +16,8 @@ public class Code : MonoBehaviour
     public AudioSource audio1, audio2, audio3;
     public CameraController cam;
 
+    public Animator anim;
+
     void Start()
     {
         codeTextValue = "";
@@ -28,38 +30,63 @@ public class Code : MonoBehaviour
         if (gameObject.tag == "Safe1" && codeTextValue == generatedCode.generatedCode1)
         {
             audio1.Play();
-
-            decrypted.safe1 = true;
+            anim.SetTrigger("Good");
             codeTextValue = "";
-            opened.TriggerDialogue();
-
             audio3.Play();
-            cam.allowMovement = true;
-        }
 
-        if (gameObject.tag == "Safe2" && codeTextValue == generatedCode.generatedCode2)
+            StartCoroutine(WaitForSafe1Animation());
+        }
+        else if (gameObject.tag == "Safe2" && codeTextValue == generatedCode.generatedCode2)
         {
             audio1.Play();
-
-            decrypted.safe2 = true;
+            anim.SetTrigger("Good");
             codeTextValue = "";
-            opened.TriggerDialogue();
-
             audio3.Play();
-            cam.allowMovement = true;
-        }
 
-        if (codeTextValue.Length >= 4)
+            StartCoroutine(WaitForSafe2Animation());
+        }
+        else if (codeTextValue.Length >= 4)
         {
             audio2.Play();
-
+            anim.SetTrigger("Bad");
             codeTextValue = "";
             locked.TriggerDialogue();
+
+            StartCoroutine(WaitForBadAnimation());
         }
     }
 
     public void AddDigit(string digit)
     {
         codeTextValue += digit;
+    }
+
+    private IEnumerator WaitForSafe1Animation()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        anim.SetTrigger("Nothing");
+
+        opened.TriggerDialogue();
+        cam.allowMovement = true;
+        decrypted.safe1 = true;
+    }
+
+    private IEnumerator WaitForSafe2Animation()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        anim.SetTrigger("Nothing");
+
+        opened.TriggerDialogue();
+        cam.allowMovement = true;
+        decrypted.safe2 = true;
+    }
+
+    private IEnumerator WaitForBadAnimation()
+    {
+        yield return new WaitForSeconds(1f);
+
+        anim.SetTrigger("Nothing");
     }
 }

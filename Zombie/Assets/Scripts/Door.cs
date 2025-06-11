@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    public DialogueTrigger trigger;
+    public DialogueTrigger trigger, open;
+    public BackgroundChange bg;
     
     public Containers unlocked;
     public string sceneName;
@@ -26,7 +27,7 @@ public class Door : MonoBehaviour
             trigger.TriggerDialogue();
             return;
         }
-        if (sceneName == "Elevator" && unlocked.power == false)
+        if (sceneName == "Reception" && unlocked.power == false)
         {
             trigger.TriggerDialogue();
             return;
@@ -34,6 +35,11 @@ public class Door : MonoBehaviour
         if (sceneName == "Restaurant" && unlocked.crowbar == false)
         {
             trigger.TriggerDialogue();
+            return;
+        }
+        else if (sceneName == "Restaurant" && unlocked.crowbar == true && bg.isOpen == false)
+        {
+            open.TriggerDialogue();
             return;
         }
 

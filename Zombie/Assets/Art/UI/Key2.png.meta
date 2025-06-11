@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c5a40af2e2dfbe44e95cfe984038b3b1
+guid: 94b1fa49ee1e1344780bcc315d786a2a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3875627927782276523
-    second: OpenMedNew_0
+      213: 427456674021794434
+    second: SafeKeyLight_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OpenMedNew_0
+      name: SafeKeyLight_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 7
-        width: 72
-        height: 106
+        x: 3
+        y: 8
+        width: 33
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55244f20fe0073ac0800000000000000
-      internalID: -3875627927782276523
+      spriteID: 28260fb8491aee500800000000000000
+      internalID: 427456674021794434
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      OpenMedNew_0: -3875627927782276523
+      SafeKeyLight_0: 427456674021794434
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

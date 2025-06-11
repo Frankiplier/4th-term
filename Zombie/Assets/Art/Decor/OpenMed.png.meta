@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 311068567e3faf9458e6786b17f7b8d7
+guid: c5a40af2e2dfbe44e95cfe984038b3b1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4401532590645693522
-    second: OpenMed_0
+      213: -3875627927782276523
+    second: OpenMedNew_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OpenMed_0
+      name: OpenMedNew_0
       rect:
         serializedVersion: 2
         x: 4
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ea3324bdd6d9ae2c0800000000000000
-      internalID: -4401532590645693522
+      spriteID: 55244f20fe0073ac0800000000000000
+      internalID: -3875627927782276523
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      OpenMed_0: -4401532590645693522
+      OpenMedNew_0: -3875627927782276523
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

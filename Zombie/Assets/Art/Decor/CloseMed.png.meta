@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 345c63dbff8b97f489d20383ce6e4e1f
+guid: 85e878918043fc54c94407a110bb5a52
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2217092721209630320
-    second: CloseMed_0
+      213: -6695741480011551170
+    second: CloseMedNew_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CloseMed_0
+      name: CloseMedNew_0
       rect:
         serializedVersion: 2
         x: 4
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 091223eaaed4b31e0800000000000000
-      internalID: -2217092721209630320
+      spriteID: e3e20187992f313a0800000000000000
+      internalID: -6695741480011551170
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CloseMed_0: -2217092721209630320
+      CloseMedNew_0: -6695741480011551170
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

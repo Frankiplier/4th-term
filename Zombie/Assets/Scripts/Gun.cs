@@ -94,7 +94,7 @@ public class Gun : MonoBehaviour
         audio.Play();
 
         ui.shellsCount -= 1;
-        ui.shellsText.text = ui.shellsCount.ToString();
+        ui.shellsText.text = "x " + ui.shellsCount.ToString();
     }
     
     private IEnumerator WaitForDeath(RaycastHit2D hit)

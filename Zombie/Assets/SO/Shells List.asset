@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58bdd1784e6d6084d89e2891da1fcead, type: 3}
   m_Name: Shells List
   m_EditorClassIdentifier: 
-  pickedUpShells: 0101000000000000
+  pickedUpShells: 010100000000000000
