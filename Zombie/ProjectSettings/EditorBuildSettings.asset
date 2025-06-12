@@ -15,23 +15,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Hallway.unity
     guid: 864f42bb1af232c4498e4a4461cef5f8
   - enabled: 1
-    path: Assets/Scenes/Room.unity
-    guid: d5a5a91fea79e3c49810d06a2a5d6a4e
-  - enabled: 1
     path: Assets/Scenes/Storage.unity
     guid: 7e35cb8573926c74ea1b0b21160a6925
   - enabled: 1
     path: Assets/Scenes/Stairway.unity
     guid: b12062a69f6dac34ab074e2b03908698
   - enabled: 1
-    path: Assets/Scenes/Elevator.unity
-    guid: 749e2fb9c5f1ce64ab8c4c1b8ec61786
-  - enabled: 1
-    path: Assets/Scenes/Reception.unity
-    guid: 78fa1ce7e0c45cc41a55d9362ebb1b2e
+    path: Assets/Scenes/Room.unity
+    guid: d5a5a91fea79e3c49810d06a2a5d6a4e
   - enabled: 1
     path: Assets/Scenes/Restaurant.unity
     guid: 757032d225c7f204fb0ea6a9940ea9ff
+  - enabled: 1
+    path: Assets/Scenes/Reception.unity
+    guid: 78fa1ce7e0c45cc41a55d9362ebb1b2e
   - enabled: 1
     path: Assets/Scenes/EndMenu.unity
     guid: 36e003e14f27fde4f85dd7a57db71fcc

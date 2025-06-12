@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class EndMenu : MonoBehaviour
 {
     [SerializeField] Containers containers;
-    public DialogueTrigger allItems, keyItem, dishItem, noItems;
+    public TypewriterEffect typewriterEffect;
 
     void Start()
     {
@@ -20,19 +20,19 @@ public class EndMenu : MonoBehaviour
 
         if (containers.keys && containers.dish)
         {
-            allItems.TriggerDialogue();
+            typewriterEffect.StartTyping("With the car keys you found in the safe, you were able to quickly escape from the zombie-infested hotel. The food you found in the restaurant helped you survive the long and exhausting journey. You have finally reached the safety of the survivors' camp. You are safe.");
         }
         else if (containers.keys)
         {
-            keyItem.TriggerDialogue();
+            typewriterEffect.StartTyping("Thanks to the car keys you found in the safe, you've managed to get to safety from the zombie-infested hotel. Unfortunately, when you stopped at a petrol station on the way to buy something to eat, you were attacked by a zombie petrol station attendant. You got bitten.");
         }
         else if (containers.dish)
         {
-            dishItem.TriggerDialogue();
+            typewriterEffect.StartTyping("The food you found in the restaurant energised you, but the long walk left you incredibly tired. You decided to sit down on a bench to rest for a moment and didn't notice the zombie approaching you from behind. You were bitten.");
         }
         else
         {
-            noItems.TriggerDialogue();
+            typewriterEffect.StartTyping("You found nothing in the hotel that could help you survive your escape. Without energy or transport, a swarm of zombies quickly caught up with you. You were eaten.");
         }
     }
 
