@@ -14,7 +14,14 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 1f;
+        PlayerPrefs.DeleteAll();
+        
+        if (Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+        }
+
+        CameraFade.Instance.StartFadeIn();
         
         MusicManager.Instance.PlayMusic("MainMenu");
 
@@ -38,12 +45,10 @@ public class MainMenu : MonoBehaviour
 
     private IEnumerator FadeBeforeTransition(int sceneIndex)
     {
-        CameraFade.Instance.TriggerFade();
+        CameraFade.Instance.StartFadeOut();
 
-        while (CameraFade.Instance.IsFading())
-        {
-            yield return null;
-        }
+        yield return new WaitUntil(() => CameraFade.Instance.IsFading());
+        yield return new WaitUntil(() => !CameraFade.Instance.IsFading());
 
         if (sceneIndex >= 0)
         {

@@ -46,6 +46,11 @@ public class Interface : MonoBehaviour
         {
             tutorial.TriggerDialogue();
         }
+
+        if (Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+        }
     }
 
     void Update()

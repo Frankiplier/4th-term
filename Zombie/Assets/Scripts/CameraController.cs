@@ -8,6 +8,13 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
+        if (Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+        }
+
+        CameraFade.Instance.StartFadeIn();
+
         cameraPosX = transform.position.x;
     }
 

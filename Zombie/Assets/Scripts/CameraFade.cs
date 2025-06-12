@@ -5,99 +5,58 @@ public class CameraFade : MonoBehaviour
 {
     public static CameraFade Instance;
 
-    public float speedScale;
-    private bool fade = false;
-    public bool isFading = false;
-
-    public AnimationCurve Curve = new AnimationCurve(new Keyframe(0, 1),
-    new Keyframe(0.5f, 0.5f, -1.5f, -1.5f), new Keyframe(1, 0));
+    public float fadeDuration = 1f;
     public Color fadeColor = Color.black;
-    private float alpha = 1f, time = 0f;
+
+    private float alpha = 1f;
     private Texture2D texture;
-    private int direction = 0;
+    private bool isFading = false;
+    private Coroutine fadeCoroutine;
 
     void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-
-        else
+        if (Instance != null)
         {
             Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
 
     void Start()
     {
-        Time.timeScale = 1;
+        texture = new Texture2D(1, 1);
+        texture.SetPixel(0, 0, fadeColor);
+        texture.Apply();
 
         alpha = 1f;
-        time = 0f;
-        direction = 1;
-
-        texture = new Texture2D(1, 1);
-        texture.SetPixel(0, 0, new Color(fadeColor.r, fadeColor.g, fadeColor.b, alpha));
-        texture.Apply();
-    }
-
-    void Update()
-    {
-        if (fade)
-        {
-            if (direction == 0)
-            {
-                if (alpha >= 1f)
-                {
-                    alpha = 1f;
-                    time = 0f;
-                    direction = 1;
-
-                    fade = false;
-                    isFading = false;
-                }
-
-                else if (alpha == 0)
-                {
-                    alpha = 0f;
-                    time = 1f;
-                    direction = -1;
-
-                    fade = false;
-                    StartCoroutine(WaitBeforeFade());
-                }
-            }
-        }
-    }
-
-    public void OnGUI()
-    {
-        if (alpha > 0f) GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), texture);
-
-        if (direction != 0)
-        {
-            time += direction * Time.deltaTime * speedScale;
-            alpha = Curve.Evaluate(time);
-            texture.SetPixel(0, 0, new Color(fadeColor.r, fadeColor.g, fadeColor.b, alpha));
-            texture.Apply();
-
-            if (alpha <= 0f || alpha >= 1f) direction = 0;
-        }
-    }
-
-    public void TriggerFade()
-    {
-        fade = true;
         isFading = true;
-
-        direction = -1;
-        time = 1f;
+        StartCoroutine(FadeIn());
     }
 
-    public bool IsFadingComplete()
+    void OnGUI()
     {
-        return alpha <= 0f;
+        if (alpha > 0f)
+        {
+            Color color = new Color(fadeColor.r, fadeColor.g, fadeColor.b, alpha);
+            GUI.color = color;
+            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), texture);
+        }
+    }
+
+    public void StartFadeIn(float duration = -1f)
+    {
+        if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
+        fadeCoroutine = StartCoroutine(FadeIn(duration > 0f ? duration : fadeDuration));
+    }
+
+    public void StartFadeOut(float duration = -1f)
+    {
+        if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
+        fadeCoroutine = StartCoroutine(FadeOut(duration > 0f ? duration : fadeDuration));
     }
 
     public bool IsFading()
@@ -105,10 +64,37 @@ public class CameraFade : MonoBehaviour
         return isFading;
     }
 
-    private IEnumerator WaitBeforeFade()
+    private IEnumerator FadeIn(float duration = 1f)
     {
-        yield return new WaitForSeconds(1.5f);
+        isFading = true;
+        float time = 0f;
+        alpha = 1f;
 
+        while (time < duration)
+        {
+            time += Time.unscaledDeltaTime;
+            alpha = Mathf.Lerp(1f, 0f, time / duration);
+            yield return null;
+        }
+
+        alpha = 0f;
+        isFading = false;
+    }
+
+    private IEnumerator FadeOut(float duration = 1f)
+    {
+        isFading = true;
+        float time = 0f;
+        alpha = 0f;
+
+        while (time < duration)
+        {
+            time += Time.unscaledDeltaTime;
+            alpha = Mathf.Lerp(0f, 1f, time / duration);
+            yield return null;
+        }
+
+        alpha = 1f;
         isFading = false;
     }
 }

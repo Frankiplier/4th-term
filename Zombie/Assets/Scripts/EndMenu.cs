@@ -9,6 +9,13 @@ public class EndMenu : MonoBehaviour
 
     void Start()
     {
+        if (Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+        }
+
+        CameraFade.Instance.StartFadeIn();
+
         MusicManager.Instance.PlayMusic("MainMenu");
         
         StartCoroutine(TriggerDialogueWithDelay());
@@ -24,7 +31,7 @@ public class EndMenu : MonoBehaviour
         }
         else if (containers.keys)
         {
-            typewriterEffect.StartTyping("Thanks to the car keys you found in the safe, you've managed to get to safety from the zombie-infested hotel. Unfortunately, when you stopped at a petrol station on the way to buy something to eat, you were attacked by a zombie petrol station attendant. You got bitten.");
+            typewriterEffect.StartTyping("Thanks to the car keys you found in the safe, you've managed to get to safety from the zombie-infested hotel. Unfortunately, when you stopped at a gas station on the way to buy something to eat, you were attacked by a gas station zombie-employee. You got bitten.");
         }
         else if (containers.dish)
         {
@@ -48,12 +55,10 @@ public class EndMenu : MonoBehaviour
 
     private IEnumerator FadeBeforeTransition(int sceneIndex)
     {
-        CameraFade.Instance.TriggerFade();
+        CameraFade.Instance.StartFadeOut();
 
-        while (CameraFade.Instance.IsFading())
-        {
-            yield return null;
-        }
+        yield return new WaitUntil(() => CameraFade.Instance.IsFading());
+        yield return new WaitUntil(() => !CameraFade.Instance.IsFading());
 
         if (sceneIndex >= 0)
         {

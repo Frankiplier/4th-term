@@ -15,14 +15,12 @@ public class ElevatorDoor : MonoBehaviour
 
     private IEnumerator FadeBeforeTransition(string sceneName)
     {
-        CameraFade.Instance.TriggerFade();
+        CameraFade.Instance.StartFadeOut();
 
-        while (CameraFade.Instance.IsFading())
-        {
-            yield return null;
-        }
+        yield return new WaitUntil(() => CameraFade.Instance.IsFading());
+        yield return new WaitUntil(() => !CameraFade.Instance.IsFading());
 
-        MusicManager.Instance.PlayMusic("Theme");
+        // MusicManager.Instance.PlayMusic("Theme");
 
         SceneManager.LoadScene(sceneName);
 

@@ -41,13 +41,17 @@ public class Flashlight : MonoBehaviour
         {
             currentBattery = PlayerPrefs.GetFloat(BatteryKey, maxBattery);
         }
-
         else
         {
             currentBattery = maxBattery;
         }
 
         transform.localScale = new Vector3(currentBattery, currentBattery, 1f);
+
+        if (Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+        }
     }
 
     void Update()

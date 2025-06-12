@@ -32,13 +32,11 @@ public class LostMenu : MonoBehaviour
     private IEnumerator FadeBeforeTransition(int sceneIndex)
     {
         Time.timeScale = 1f;
-        
-        CameraFade.Instance.TriggerFade();
 
-        while (CameraFade.Instance.IsFading())
-        {
-            yield return null;
-        }
+        CameraFade.Instance.StartFadeOut();
+
+        yield return new WaitUntil(() => CameraFade.Instance.IsFading());
+        yield return new WaitUntil(() => !CameraFade.Instance.IsFading());
 
         SceneManager.LoadScene(sceneIndex);
     }

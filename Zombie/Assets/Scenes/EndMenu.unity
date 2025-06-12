@@ -342,7 +342,6 @@ GameObject:
   - component: {fileID: 240630705}
   - component: {fileID: 240630704}
   - component: {fileID: 240630703}
-  - component: {fileID: 240630702}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -350,54 +349,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &240630702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240630701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aa4654faa66f7b478546efbb4f6074c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedScale: 0.3
-  isFading: 0
-  Curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.5
-      value: 0.5
-      inSlope: -1.5
-      outSlope: -1.5
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &240630703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -599,7 +550,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2062618953}
         m_TargetAssemblyTypeName: EndMenu, Assembly-CSharp
         m_MethodName: ExitGame
         m_Mode: 1
@@ -1499,7 +1450,7 @@ GameObject:
   - component: {fileID: 1898879001}
   - component: {fileID: 1898879000}
   m_Layer: 5
-  m_Name: 'Start '
+  m_Name: Main Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1569,7 +1520,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2062618953}
         m_TargetAssemblyTypeName: EndMenu, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
@@ -1717,8 +1668,8 @@ RectTransform:
   m_Children:
   - {fileID: 2141866985}
   - {fileID: 1187434169}
-  - {fileID: 567168686}
   - {fileID: 1898878999}
+  - {fileID: 567168686}
   - {fileID: 1301612877}
   - {fileID: 739059017}
   - {fileID: 1659324837}
@@ -1839,5 +1790,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 240630706}
-  - {fileID: 1572810132}
   - {fileID: 2062618947}
+  - {fileID: 1572810132}

@@ -56,12 +56,10 @@ public class Door : MonoBehaviour
 
     private IEnumerator FadeBeforeTransition(string sceneName)
     {
-        CameraFade.Instance.TriggerFade();
+        CameraFade.Instance.StartFadeOut();
 
-        while (CameraFade.Instance.IsFading())
-        {
-            yield return null;
-        }
+        yield return new WaitUntil(() => CameraFade.Instance.IsFading());
+        yield return new WaitUntil(() => !CameraFade.Instance.IsFading());
 
         if (sceneName == "Elevator")
         {

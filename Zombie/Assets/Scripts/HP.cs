@@ -8,6 +8,14 @@ public class HP : MonoBehaviour
 
     public GameObject lostMenu;
 
+    void Start()
+    {
+        if (Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+        }
+    }
+
     public void RemoveHeart()
     {
         if (currentHP <= 0) return;

@@ -20,7 +20,6 @@ public class Gun : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
         else
         {
             Instance = this;
@@ -39,6 +38,11 @@ public class Gun : MonoBehaviour
     void Start()
     {
         crosshair.SetActive(true);
+
+        if (Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+        }
     }
 
     void Update()

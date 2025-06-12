@@ -27,11 +27,19 @@ public class DialogueManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void Start()
+    {
+        if (Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+        }
+    }
  
     public void StartDialogue(Dialogue dialogue)
     {
         if (dialogue.dialogueLines.Count == 0 || isDialogueActive == true)
-        return;
+            return;
 
         isDialogueActive = true;
 
