@@ -13,6 +13,14 @@ public class CodeItem : MonoBehaviour
         codePaper.SetActive(false);
     }
 
+    public void CloseUI()
+    {
+        cam.allowMovement = true;
+        
+        codePaper.SetActive(false);
+        isVisible = false;
+    }
+
     void OnMouseDown()
     {
         if (isVisible == false)

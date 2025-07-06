@@ -25,6 +25,14 @@ public class Safe2 : MonoBehaviour
         }
     }
 
+    public void CloseUI()
+    {
+        cam.allowMovement = true;
+
+        lockBG.SetActive(false);
+        isVisible = false;
+    }
+
     void OnMouseDown()
     {
         if (isVisible == false && unlocked.safe2 == false)
@@ -34,12 +42,12 @@ public class Safe2 : MonoBehaviour
             lockBG.SetActive(true);
             isVisible = true;
         }
-        else
-        {
-            cam.allowMovement = true;
+        // else
+        // {
+        //     cam.allowMovement = true;
 
-            lockBG.SetActive(false);
-            isVisible = false;
-        }
+        //     lockBG.SetActive(false);
+        //     isVisible = false;
+        // }
     }
 }
