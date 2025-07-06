@@ -51,6 +51,8 @@ public class Door : MonoBehaviour
             return;
         }
 
+        if (Flashlight.Instance.isCharging) return;
+
         StartCoroutine(FadeBeforeTransition(sceneName));
     }
 
