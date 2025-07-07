@@ -659,6 +659,9 @@ MonoBehaviour:
   bg: {fileID: 1918471798}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Restaurant
+  doorID: Reception3
+  targetDoorID: Restaurant
+  spawnOffset: {x: 0, y: 0.0231}
   audio: {fileID: 671969252}
 --- !u!61 &671969247
 BoxCollider2D:
@@ -1421,6 +1424,9 @@ MonoBehaviour:
   bg: {fileID: 0}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: EndMenu
+  doorID: Reception1
+  targetDoorID: End
+  spawnOffset: {x: 0, y: 1.5953}
   audio: {fileID: 0}
 --- !u!61 &1539721894
 BoxCollider2D:
@@ -1799,6 +1805,9 @@ MonoBehaviour:
   bg: {fileID: 0}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Hallway
+  doorID: Reception2
+  targetDoorID: Hallway3
+  spawnOffset: {x: 0, y: 0.3674}
   audio: {fileID: 0}
 --- !u!61 &1793000327
 BoxCollider2D:
@@ -1956,6 +1965,50 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836389367}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1838311630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1838311632}
+  - component: {fileID: 1838311631}
+  m_Layer: 0
+  m_Name: CameraManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1838311631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838311630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38c36edc459fa224c8ac0eec4514f388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1838311632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838311630}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2249,6 +2302,7 @@ SceneRoots:
   - {fileID: 255115741}
   - {fileID: 943802706}
   - {fileID: 1400546278}
+  - {fileID: 1838311632}
   - {fileID: 1688375773}
   - {fileID: 232290736}
   - {fileID: 1918471797}

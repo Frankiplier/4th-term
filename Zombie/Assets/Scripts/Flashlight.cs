@@ -10,7 +10,7 @@ public class Flashlight : MonoBehaviour
 
     public GameObject lightCone;
     public float maxBattery, currentBattery, dischargeRate;
-    public bool isCharging = false, batteryDead = false;
+    public bool isCharging = false, batteryDead = false, cantCharge = false;
     private const string BatteryKey = "CurrentBattery";
 
     void Awake()

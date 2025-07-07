@@ -28,7 +28,7 @@ public class ChargingStation : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (currentCooldown <= 0f && flashlight.currentBattery < flashlight.maxBattery)
+        if (currentCooldown <= 0f && flashlight.currentBattery < flashlight.maxBattery && !flashlight.cantCharge)
         {
             audio1.Play();
 

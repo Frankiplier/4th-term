@@ -45,5 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashlightPrefab: {fileID: 5632036335924389484, guid: f39b5c565e6a1b84b8e08f7ddcd3606d, type: 3}
-  gunPrefab: {fileID: 1734399917779393650, guid: cc56677a1d091aa42ab01c52c6c44ddb, type: 3}
   interfacePrefab: {fileID: 8888257575335910132, guid: b43419ecd6af52d42a8ce0a40a590eb0, type: 3}

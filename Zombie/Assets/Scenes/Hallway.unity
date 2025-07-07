@@ -156,6 +156,9 @@ MonoBehaviour:
   bg: {fileID: 0}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Room
+  doorID: Hallway5
+  targetDoorID: HotelRoom2
+  spawnOffset: {x: 0, y: 1.7512}
   audio: {fileID: 0}
 --- !u!61 &35099522
 BoxCollider2D:
@@ -358,6 +361,9 @@ MonoBehaviour:
   bg: {fileID: 0}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Reception
+  doorID: Hallway3
+  targetDoorID: Reception2
+  spawnOffset: {x: 0, y: 1.64}
   audio: {fileID: 0}
 --- !u!61 &136922332
 BoxCollider2D:
@@ -681,6 +687,9 @@ MonoBehaviour:
   bg: {fileID: 0}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Stairway
+  doorID: Hallway2
+  targetDoorID: 
+  spawnOffset: {x: 0, y: 1.7197}
   audio: {fileID: 0}
 --- !u!61 &270899730
 BoxCollider2D:
@@ -981,6 +990,9 @@ MonoBehaviour:
   bg: {fileID: 0}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Storage
+  doorID: Hallway1
+  targetDoorID: 
+  spawnOffset: {x: 0, y: 1.7658}
   audio: {fileID: 0}
 --- !u!61 &345594916
 BoxCollider2D:
@@ -1255,6 +1267,50 @@ MonoBehaviour:
   locations:
   - {fileID: 8585717262985926111}
   - {fileID: 312096134}
+--- !u!1 &438419032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 438419034}
+  - component: {fileID: 438419033}
+  m_Layer: 0
+  m_Name: CameraManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &438419033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438419032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38c36edc459fa224c8ac0eec4514f388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &438419034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438419032}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &446240197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2630,6 +2686,9 @@ MonoBehaviour:
   bg: {fileID: 0}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: HotelRoom
+  doorID: Hallway4
+  targetDoorID: HotelRoom1
+  spawnOffset: {x: 0, y: 1.69}
   audio: {fileID: 0}
 --- !u!61 &1840709386
 BoxCollider2D:
@@ -3072,6 +3131,7 @@ SceneRoots:
   - {fileID: 2003171073}
   - {fileID: 426732063}
   - {fileID: 1869341228}
+  - {fileID: 438419034}
   - {fileID: 187710195}
   - {fileID: 1765765414}
   - {fileID: 1009782139}

@@ -9,6 +9,9 @@ public class Door : MonoBehaviour
     
     public Containers unlocked;
     public string sceneName;
+    public string doorID;
+    public string targetDoorID;
+    public Vector2 spawnOffset = new Vector2(0f, 0f);
 
     public AudioSource audio;
 
@@ -53,11 +56,13 @@ public class Door : MonoBehaviour
 
         if (Flashlight.Instance.isCharging) return;
 
+        DoorTransitionData.targetDoorID = targetDoorID;
         StartCoroutine(FadeBeforeTransition(sceneName));
     }
 
     private IEnumerator FadeBeforeTransition(string sceneName)
     {
+        Flashlight.Instance.cantCharge = true;
         CameraFade.Instance.StartFadeOut();
 
         yield return new WaitUntil(() => CameraFade.Instance.IsFading());
@@ -68,6 +73,7 @@ public class Door : MonoBehaviour
             MusicManager.Instance.PlayMusic("Elevator");
         }
 
+        Flashlight.Instance.cantCharge = false;
         SceneManager.LoadScene(sceneName);
     }
 }
