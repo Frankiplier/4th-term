@@ -657,6 +657,7 @@ MonoBehaviour:
   trigger: {fileID: 671969250}
   open: {fileID: 671969251}
   bg: {fileID: 1918471798}
+  cam: {fileID: 1155925414}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Restaurant
   doorID: Reception3
@@ -1422,6 +1423,7 @@ MonoBehaviour:
   trigger: {fileID: 1539721897}
   open: {fileID: 0}
   bg: {fileID: 0}
+  cam: {fileID: 1155925414}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: EndMenu
   doorID: Reception1
@@ -1803,6 +1805,7 @@ MonoBehaviour:
   trigger: {fileID: 1793000330}
   open: {fileID: 0}
   bg: {fileID: 0}
+  cam: {fileID: 1155925414}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Hallway
   doorID: Reception2

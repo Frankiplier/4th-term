@@ -795,6 +795,7 @@ MonoBehaviour:
   trigger: {fileID: 899145237}
   open: {fileID: 0}
   bg: {fileID: 0}
+  cam: {fileID: 474723328}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Hallway
   doorID: 
@@ -1135,7 +1136,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 6bfa12784e4c45b43a3ebda5186efdb7, type: 3}
-  m_Color: {r: 0.16037738, g: 0.108179085, b: 0.108179085, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

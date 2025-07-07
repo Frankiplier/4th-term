@@ -6,6 +6,7 @@ public class Door : MonoBehaviour
 {
     public DialogueTrigger trigger, open;
     public BackgroundChange bg;
+    public CameraController cam;
     
     public Containers unlocked;
     public string sceneName;
@@ -63,6 +64,7 @@ public class Door : MonoBehaviour
     private IEnumerator FadeBeforeTransition(string sceneName)
     {
         Flashlight.Instance.cantCharge = true;
+        cam.allowMovement = false;
         CameraFade.Instance.StartFadeOut();
 
         yield return new WaitUntil(() => CameraFade.Instance.IsFading());
@@ -74,6 +76,7 @@ public class Door : MonoBehaviour
         }
 
         Flashlight.Instance.cantCharge = false;
+        cam.allowMovement = true;
         SceneManager.LoadScene(sceneName);
     }
 }

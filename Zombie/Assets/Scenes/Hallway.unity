@@ -154,6 +154,7 @@ MonoBehaviour:
   trigger: {fileID: 35099525}
   open: {fileID: 0}
   bg: {fileID: 0}
+  cam: {fileID: 892736401}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Room
   doorID: Hallway5
@@ -359,6 +360,7 @@ MonoBehaviour:
   trigger: {fileID: 136922335}
   open: {fileID: 0}
   bg: {fileID: 0}
+  cam: {fileID: 892736401}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Reception
   doorID: Hallway3
@@ -685,6 +687,7 @@ MonoBehaviour:
   trigger: {fileID: 0}
   open: {fileID: 0}
   bg: {fileID: 0}
+  cam: {fileID: 892736401}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Stairway
   doorID: Hallway2
@@ -988,6 +991,7 @@ MonoBehaviour:
   trigger: {fileID: 345594919}
   open: {fileID: 0}
   bg: {fileID: 0}
+  cam: {fileID: 892736401}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Storage
   doorID: Hallway1
@@ -2684,6 +2688,7 @@ MonoBehaviour:
   trigger: {fileID: 0}
   open: {fileID: 0}
   bg: {fileID: 0}
+  cam: {fileID: 892736401}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: HotelRoom
   doorID: Hallway4

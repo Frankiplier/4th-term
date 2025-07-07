@@ -1166,6 +1166,7 @@ MonoBehaviour:
   trigger: {fileID: 1473063114}
   open: {fileID: 0}
   bg: {fileID: 0}
+  cam: {fileID: 298225186}
   unlocked: {fileID: 11400000, guid: 559b7e163ab0f0c4db660abba9043c36, type: 2}
   sceneName: Reception
   doorID: Restaurant
